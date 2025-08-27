@@ -1,9 +1,4 @@
-# Research-Project-Energy-Consumption
-Perfecto 🚀, ya entendí todo el flujo de tu experimento. Te armo un `README.md` bien organizado, con secciones claras, comandos listos para copiar y pegar, y explicación del proceso de principio a fin.
 
-Aquí tienes el **README.md** para tu carpeta `DeathStarBench`:
-
-````markdown
 # DeathStarBench - Experimentos de Consumo Energético
 
 Este repositorio contiene el despliegue y experimentación de **DeathStarBench**, con el microservicio **HotelReservation**, sobre un clúster de Kubernetes. El objetivo es medir el consumo energético de las aplicaciones mediante la integración con la herramienta **Ecofloc**.
