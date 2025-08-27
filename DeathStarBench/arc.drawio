@@ -1,0 +1,169 @@
+<mxfile>
+  <diagram id="SWKmUbetOtN34v4Wt5A_" name="Page-1">
+    <mxGraphModel dx="2236" dy="2906" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="46" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="130" width="470" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="59" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2" value="Hotel Reservation Architecture" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="195" y="-70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Review" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="180" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="47" style="edgeStyle=none;html=1;" parent="1" source="7" target="46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="48" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7" target="25" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7" target="19" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="355" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="52" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7" target="17" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="53" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7" target="3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="54" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7" target="22" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="55" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7" target="27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="56" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7" target="13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="Frontend" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="Geo" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="320" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="Profile" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="180" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="Rate" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="320" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="Attractions" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="180" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="Reserve" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="180" y="325" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="Recommendation" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="180" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="49" value="" style="edgeStyle=none;html=1;" parent="1" source="25" target="9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="50" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="25" target="15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25" value="Search" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="180" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="User" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="180" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="" style="edgeStyle=none;html=1;" parent="1" source="30" target="36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="60" style="edgeStyle=none;html=1;entryX=0.411;entryY=0.01;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="30" target="38" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-180" y="-70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="30" value="Input:&lt;div&gt;&lt;div style=&quot;&quot;&gt;-L: Mide la latencia de cada solicitud.&lt;/div&gt;&lt;div style=&quot;&quot;&gt;-D: Define la distribución de los tiempos de llegada.&lt;/div&gt;&lt;div style=&quot;&quot;&gt;num-threads: Especifica la cantidad de hilos utilizados.&lt;/div&gt;&lt;div style=&quot;&quot;&gt;num-conns: Indica el número de conexiones concurrentes.&lt;/div&gt;&lt;div style=&quot;&quot;&gt;duration: Determina la duración total de la prueba.&lt;/div&gt;&lt;div style=&quot;&quot;&gt;-s: Selecciona el script Lua para personalizar las solicitudes.&lt;/div&gt;&lt;div style=&quot;&quot;&gt;-R: Establece la tasa de solicitudes por segundo.&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;../wrk2/wrk -D exp -t &amp;lt;num-threads&amp;gt; -c &amp;lt;num-conns&amp;gt; -d &amp;lt;duration&amp;gt; -L -s ./wrk2/scripts/hotel-reservation/mixed-workload_type_1.lua http://localhost:5000 -R &amp;lt;reqs-per-sec&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-310" y="-450" width="260" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="Output:&lt;br&gt;&lt;div&gt;Latencia:&lt;/div&gt;&lt;div&gt;Promedio: 37.68 ms.&lt;/div&gt;&lt;div&gt;Máxima: 117.31 ms.&lt;/div&gt;&lt;div&gt;Percentiles:&lt;/div&gt;&lt;div&gt;50%: 17.47 ms.&lt;/div&gt;&lt;div&gt;75%: 47.39 ms.&lt;/div&gt;&lt;div&gt;99%: 117.38 ms.&lt;/div&gt;&lt;div&gt;Solicitudes:&lt;/div&gt;&lt;div&gt;Total: 60 solicitudes en 30 segundos.&lt;/div&gt;&lt;div&gt;Tasa: 2 solicitudes/segundo.&lt;/div&gt;&lt;div&gt;Transferencia de Datos:&lt;/div&gt;&lt;div&gt;Total: 96.50 KB leídos.&lt;/div&gt;&lt;div&gt;Tasa: 3.22 KB/segundo.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="660" width="310" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="-400" y="40" width="20" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="Medicion de consumo de Energia CPU-NIC-SD-RAM" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-530" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;div&gt;Parámetros y funcionalidades&lt;/div&gt;&lt;div&gt;-D exp&lt;/div&gt;&lt;div&gt;Define la distribución de los tiempos de llegada de las solicitudes. En este caso, exp indica una distribución exponencial, útil para simular cargas realistas donde los intervalos entre solicitudes varían aleatoriamente.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-t &amp;lt;num-threads&amp;gt;&lt;/div&gt;&lt;div&gt;Especifica el número de hilos de ejecución que utilizará wrk. Cada hilo puede manejar múltiples conexiones, permitiendo aprovechar mejor los recursos del sistema y simular mayor concurrencia.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-c &amp;lt;num-conns&amp;gt;&lt;/div&gt;&lt;div&gt;Indica el número total de conexiones abiertas simultáneamente durante la prueba. Este valor determina cuántas conexiones concurrentes se mantendrán activas hacia el servidor de destino.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-d &amp;lt;duration&amp;gt;&lt;/div&gt;&lt;div&gt;Define la duración total de la prueba de carga (por ejemplo, 30s para 30 segundos). Durante este tiempo, wrk enviará solicitudes de acuerdo a los parámetros configurados.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-L&lt;/div&gt;&lt;div&gt;Habilita la medición de latencias a nivel de socket, proporcionando estadísticas más precisas sobre los tiempos de respuesta de las solicitudes.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-s ./wrk2_lua_scripts/mixed-workload_type_1.lua&lt;/div&gt;&lt;div&gt;Permite especificar un script en Lua para personalizar el tipo de carga o las solicitudes enviadas. En este caso, el script mixed-workload_type_1.lua define el comportamiento de las solicitudes, pudiendo simular diferentes tipos de operaciones o cargas mixtas.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;http://frontend.hotel-res.svc.cluster.local:5000&lt;/div&gt;&lt;div&gt;Es la URL del endpoint al que se enviarán las solicitudes. En este ejemplo, corresponde al servicio frontend desplegado en Kubernetes.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-R &amp;lt;reqs-per-sec&amp;gt;&lt;/div&gt;&lt;div&gt;Establece la tasa objetivo de solicitudes por segundo que se desea generar durante la prueba. Por ejemplo, -R 2000 intentará enviar 2000 solicitudes por segundo.&lt;/div&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-395" y="-1170" width="430" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="38" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-220" y="-60" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="40" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-210" y="-50" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="41" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-200" y="-40" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="42" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-190" y="-30" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-180" y="-20" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="44" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-170" y="-10" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="57" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="45" target="7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="50" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="58" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="45" target="32" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="50" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="45" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-160" width="90" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

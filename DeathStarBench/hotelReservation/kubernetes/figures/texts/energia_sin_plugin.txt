@@ -1,0 +1,110 @@
+Experiment: CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.14 Watts
+Total Energy : 2.87 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.63 Watts
+Total Energy : 12.64 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.48 Watts
+Total Energy : 9.54 Joules
+Experiment: CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.12 Watts
+Total Energy : 2.33 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 3.40 Watts
+Total Energy : 67.92 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.06 Watts
+Total Energy : 1.22 Joules
+Experiment: CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.26 Watts
+Total Energy : 5.17 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 3.48 Watts
+Total Energy : 69.56 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.04 Watts
+Total Energy : 0.77 Joules
+Experiment: CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.25 Watts
+Total Energy : 5.05 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.15 Watts
+Total Energy : 2.93 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.57 Watts
+Total Energy : 11.36 Joules
+Experiment: CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.09 Watts
+Total Energy : 1.78 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.27 Watts
+Total Energy : 5.46 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.04 Watts
+Total Energy : 0.74 Joules
+Experiment: CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.08 Watts
+Total Energy : 1.60 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.30 Watts
+Total Energy : 6.03 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.02 Watts
+Total Energy : 0.37 Joules
+Experiment: CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.10 Watts
+Total Energy : 2.06 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.29 Watts
+Total Energy : 5.86 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.02 Watts
+Total Energy : 0.39 Joules
+Experiment: CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.23 Watts
+Total Energy : 4.50 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.16 Watts
+Total Energy : 3.21 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.04 Watts
+Total Energy : 0.76 Joules
+Experiment: 1 Replicas
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.06 Watts
+Total Energy : 1.18 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.27 Watts
+Total Energy : 5.35 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.01 Watts
+Total Energy : 0.30 Joules
+Experiment: 3 Replicas
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.05 Watts
+Total Energy : 1.07 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.13 Watts
+Total Energy : 2.53 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.03 Watts
+Total Energy : 0.60 Joules
+Experiment: 5 Replicas
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.24 Watts
+Total Energy : 4.74 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 2.17 Watts
+Total Energy : 43.42 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.04 Watts
+Total Energy : 0.80 Joules

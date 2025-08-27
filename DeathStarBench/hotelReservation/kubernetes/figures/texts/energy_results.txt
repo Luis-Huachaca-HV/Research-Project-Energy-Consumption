@@ -1,0 +1,227 @@
+Experiment: CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.05 Watts
+Total Energy : 19.52 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.25 Watts
+Total Energy : 90.79 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.11 Watts
+Total Energy : 38.23 Joules
+Experiment: CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.06 Watts
+Total Energy : 20.08 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.25 Watts
+Total Energy : 89.44 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.11 Watts
+Total Energy : 39.54 Joules
+Experiment: CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.05 Watts
+Total Energy : 19.68 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.26 Watts
+Total Energy : 92.14 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.12 Watts
+Total Energy : 44.70 Joules
+Experiment: CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.05 Watts
+Total Energy : 19.58 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.25 Watts
+Total Energy : 89.61 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.11 Watts
+Total Energy : 38.59 Joules
+Experiment: CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.05 Watts
+Total Energy : 1.40 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+
+Experiment: CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.06 Watts
+Total Energy : 22.93 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.24 Watts
+Total Energy : 87.46 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.01 Watts
+Total Energy : 5.17 Joules
+Experiment: CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.05 Watts
+Total Energy : 19.23 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.24 Watts
+Total Energy : 85.83 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.01 Watts
+Total Energy : 5.34 Joules
+Experiment: CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.05 Watts
+Total Energy : 19.24 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.24 Watts
+Total Energy : 85.66 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.01 Watts
+Total Energy : 5.27 Joules
+Experiment: 1 Replicas
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.05 Watts
+Total Energy : 19.31 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.24 Watts
+Total Energy : 86.68 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.01 Watts
+Total Energy : 5.15 Joules
+Experiment: 3 Replicas
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.05 Watts
+Total Energy : 19.32 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.24 Watts
+Total Energy : 87.75 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.36 Watts
+Total Energy : 129.70 Joules
+Experiment: 5 Replicas
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.05 Watts
+Total Energy : 19.36 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.24 Watts
+Total Energy : 85.16 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.03 Watts
+Total Energy : 9.75 Joules
+Experiment: CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.16 Watts
+Total Energy : 57.29 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: sudo: /home/luish/Documents/p3/ecofloc2/ecofloc/ecofloc-sd/ecofloc-sd.out: command not found
+
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: Average Power : 0.02 Watts
+Total Energy : 153.70 Joules
+Experiment: CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.13 Watts
+Total Energy : 46.66 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: sudo: /home/luish/Documents/p3/ecofloc2/ecofloc/ecofloc-sd/ecofloc-sd.out: command not found
+
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: Average Power : 0.02 Watts
+Total Energy : 134.66 Joules
+Experiment: CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.13 Watts
+Total Energy : 45.55 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: sudo: /home/luish/Documents/p3/ecofloc2/ecofloc/ecofloc-sd/ecofloc-sd.out: command not found
+
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: Average Power : 0.02 Watts
+Total Energy : 137.25 Joules
+Experiment: CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.13 Watts
+Total Energy : 47.09 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: sudo: /home/luish/Documents/p3/ecofloc2/ecofloc/ecofloc-sd/ecofloc-sd.out: command not found
+
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: Average Power : 0.01 Watts
+Total Energy : 119.40 Joules
+Experiment: CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.13 Watts
+Total Energy : 46.67 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: sudo: /home/luish/Documents/p3/ecofloc2/ecofloc/ecofloc-sd/ecofloc-sd.out: command not found
+
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: Average Power : 0.02 Watts
+Total Energy : 153.30 Joules
+Experiment: CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.13 Watts
+Total Energy : 46.70 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: sudo: /home/luish/Documents/p3/ecofloc2/ecofloc/ecofloc-sd/ecofloc-sd.out: command not found
+
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: Average Power : 0.02 Watts
+Total Energy : 138.55 Joules
+Experiment: CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.13 Watts
+Total Energy : 46.42 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: sudo: /home/luish/Documents/p3/ecofloc2/ecofloc/ecofloc-sd/ecofloc-sd.out: command not found
+
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: Average Power : 0.02 Watts
+Total Energy : 136.86 Joules
+Experiment: CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.13 Watts
+Total Energy : 46.58 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: sudo: /home/luish/Documents/p3/ecofloc2/ecofloc/ecofloc-sd/ecofloc-sd.out: command not found
+
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: Average Power : 0.02 Watts
+Total Energy : 134.72 Joules
+Experiment: 1 Replicas
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.13 Watts
+Total Energy : 45.99 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: sudo: /home/luish/Documents/p3/ecofloc2/ecofloc/ecofloc-sd/ecofloc-sd.out: command not found
+
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: Average Power : 0.02 Watts
+Total Energy : 136.35 Joules
+Experiment: 3 Replicas
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.13 Watts
+Total Energy : 45.85 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: sudo: /home/luish/Documents/p3/ecofloc2/ecofloc/ecofloc-sd/ecofloc-sd.out: command not found
+
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: Average Power : 0.02 Watts
+Total Energy : 135.11 Joules
+Experiment: 5 Replicas
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.13 Watts
+Total Energy : 46.04 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: sudo: /home/luish/Documents/p3/ecofloc2/ecofloc/ecofloc-sd/ecofloc-sd.out: command not found
+
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: Average Power : 0.02 Watts
+Total Energy : 137.76 Joules
+Experiment: CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.17 Watts
+Total Energy : 59.81 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: ^C
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: ^C
+Experiment: CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane

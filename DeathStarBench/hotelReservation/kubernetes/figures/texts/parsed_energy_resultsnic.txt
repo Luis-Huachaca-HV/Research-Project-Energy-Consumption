@@ -1,0 +1,201 @@
+Parsed Energy Results nic 2000 10 seconds
+=====================
+Experiments: 1 CPU Configuration, 2 CPUs on All Nodes, 2 CPUs on Single Node (Cordoned), 2 CPUs on Two Nodes (Uncordoned)
+
+luish-Nitro-AN515-57:
+  1 CPU Configuration: 0.01 Joules
+  2 CPUs on All Nodes: 0.0 Joules
+  2 CPUs on Single Node (Cordoned): 0.0 Joules
+  2 CPUs on Two Nodes (Uncordoned): 0.0 Joules
+
+luish@luish-Aspire-A315-55G:
+  1 CPU Configuration: 1.13 Joules
+  2 CPUs on All Nodes: 0.0 Joules
+  2 CPUs on Single Node (Cordoned): 0.0 Joules
+  2 CPUs on Two Nodes (Uncordoned): 0.0 Joules
+
+luish@luish-HP-Laptop-14-dq0xxx:
+  1 CPU Configuration: 0.0 Joules
+  2 CPUs on All Nodes: 0.0 Joules
+  2 CPUs on Single Node (Cordoned): 0.0 Joules
+  2 CPUs on Two Nodes (Uncordoned): 0.01 Joules
+
+Parsed Energy Results nic 4000 15 seconds
+=====================
+Experiments: 1 CPU Configuration, 2 CPUs on All Nodes, 2 CPUs on Single Node (Cordoned), 2 CPUs on Two Nodes (Uncordoned)
+
+luish-Nitro-AN515-57:
+  1 CPU Configuration: 0.0 Joules
+  2 CPUs on All Nodes: 0.0 Joules
+  2 CPUs on Single Node (Cordoned): 0.02 Joules
+  2 CPUs on Two Nodes (Uncordoned): 0.0 Joules
+
+luish@luish-Aspire-A315-55G:
+  1 CPU Configuration: 0.03 Joules
+  2 CPUs on All Nodes: 0.01 Joules
+  2 CPUs on Single Node (Cordoned): 0.01 Joules
+  2 CPUs on Two Nodes (Uncordoned): 0.02 Joules
+
+luish@luish-HP-Laptop-14-dq0xxx:
+  1 CPU Configuration: 0.02 Joules
+  2 CPUs on All Nodes: 0.0 Joules
+  2 CPUs on Single Node (Cordoned): 0.02 Joules
+  2 CPUs on Two Nodes (Uncordoned): 0.0 Joules
+
+Parsed Energy Results sd 4000 30 seconds
+=====================
+Experiments: 1 CPU Configuration, 2 CPUs on All Nodes, 2 CPUs on Single Node (Cordoned), 2 CPUs on Two Nodes (Uncordoned)
+
+luish-Nitro-AN515-57:
+  1 CPU Configuration: 25.89 Joules
+  2 CPUs on All Nodes: 26.8 Joules
+  2 CPUs on Single Node (Cordoned): 20.91 Joules
+  2 CPUs on Two Nodes (Uncordoned): 43.61 Joules
+
+luish@luish-Aspire-A315-55G:
+  1 CPU Configuration: 12.03 Joules
+  2 CPUs on All Nodes: 12.28 Joules
+  2 CPUs on Single Node (Cordoned): 8.68 Joules
+  2 CPUs on Two Nodes (Uncordoned): 7.98 Joules
+
+luish@luish-HP-Laptop-14-dq0xxx:
+  1 CPU Configuration: 5.78 Joules
+  2 CPUs on All Nodes: 6.04 Joules
+  2 CPUs on Single Node (Cordoned): 5.87 Joules
+  2 CPUs on Two Nodes (Uncordoned): 0.0 Joules
+
+Parsed Energy Results sd 1500 60 seconds
+=====================
+Experiments: CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane, CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane, CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane, CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane, CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane, CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane, CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane, CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane, 1 Replicas, 3 Replicas, 5 Replicas, with_pv, without_pv
+
+luish-Nitro-AN515-57:
+  CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane: 1.94 Joules
+  CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane: 1.93 Joules
+  CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane: 2.2 Joules
+  CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane: 2.05 Joules
+  CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane: 2.02 Joules
+  CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane: 2.32 Joules
+  CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane: 2.26 Joules
+  CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane: 2.28 Joules
+  1 Replicas: 2.21 Joules
+  3 Replicas: 3.97 Joules
+  5 Replicas: 6.11 Joules
+  with_pv: 4.55 Joules
+  without_pv: 4.44 Joules
+
+luish@luish-Aspire-A315-55G: 
+  CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane: 3.05 Joules
+  CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane: 2.91 Joules
+  CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane: 3.55 Joules
+  CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane: 2.79 Joules
+  CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane: 3.28 Joules
+  CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane: 1.83 Joules
+  CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane: 3.05 Joules
+  CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane: 2.29 Joules
+  1 Replicas: 2.29 Joules
+  3 Replicas: 2.65 Joules
+  5 Replicas: 2.5 Joules
+  with_pv: 2.53 Joules
+  without_pv: 0.0 Joules
+
+luish@luish-HP-Laptop-14-dq0xxx: 
+  CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane: 4.66 Joules
+  CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane: 4.18 Joules
+  CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane: 4.01 Joules
+  CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane: 4.44 Joules
+  CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane: 4.54 Joules
+  CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane: 5.11 Joules
+  CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane: 4.64 Joules
+  CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane: 4.44 Joules
+  1 Replicas: 4.37 Joules
+  3 Replicas: 5.42 Joules
+  5 Replicas: 4.15 Joules
+  with_pv: 5.03 Joules
+  without_pv: 0.0 Joules
+
+Parsed Energy Results nic 1500 60 seconds
+=====================
+Experiments: CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane, CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane, CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane, CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane, CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane, CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane, CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane, CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane, 1 Replicas, 3 Replicas, 5 Replicas
+
+luish-Nitro-AN515-57:
+  CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane: 0.01 Joules
+  CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane: 0.07 Joules
+  CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane: 0.07 Joules
+  CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane: 0.06 Joules
+  CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane: 0.07 Joules
+  CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane: 0.07 Joules
+  CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane: 0.06 Joules
+  CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane: 0.03 Joules
+  1 Replicas: 0.03 Joules
+  3 Replicas: 0.04 Joules
+  5 Replicas: 0.06 Joules
+
+luish@luish-Aspire-A315-55G:
+  CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane: 0.54 Joules
+  CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane: 0.53 Joules
+  CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane: 1.1 Joules
+  CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane: 1.08 Joules
+  CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane: 1.03 Joules
+  CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane: 1.05 Joules
+  CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane: 1.3 Joules
+  CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane: 2.06 Joules
+  1 Replicas: 1.65 Joules
+  3 Replicas: 0.63 Joules
+  5 Replicas: 0.17 Joules
+
+luish@luish-HP-Laptop-14-dq0xxx:
+  CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane: 0.04 Joules
+  CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane: 0.03 Joules
+  CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane: 0.02 Joules
+  CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane: 0.01 Joules
+  CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane: 0.06 Joules
+  CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane: 0.03 Joules
+  CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane: 0.07 Joules
+  CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane: 0.03 Joules
+  1 Replicas: 0.03 Joules
+  3 Replicas: 0.02 Joules
+  5 Replicas: 0.07 Joules
+
+Parsed Energy Results sd 1500 360 seconds
+=====================
+Experiments: CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane, CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane, CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane, CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane, CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane, CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane, CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane, CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane, 1 Replicas, 3 Replicas, 5 Replicas
+
+luish-Nitro-AN515-57:
+  CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane: 19.52 Joules
+  CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane: 20.08 Joules
+  CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane: 19.68 Joules
+  CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane: 19.58 Joules
+  CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane: 1.4 Joules
+  CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane: 22.93 Joules
+  CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane: 19.23 Joules
+  CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane: 19.24 Joules
+  1 Replicas: 19.31 Joules
+  3 Replicas: 19.32 Joules
+  5 Replicas: 19.36 Joules
+
+luish@luish-Aspire-A315-55G:
+  CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane: 90.79 Joules
+  CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane: 89.44 Joules
+  CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane: 92.14 Joules
+  CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane: 89.61 Joules
+  CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane: 87.46 Joules
+  CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane: 85.83 Joules
+  CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane: 85.66 Joules
+  CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane: 86.68 Joules
+  1 Replicas: 87.75 Joules
+  3 Replicas: 85.16 Joules
+  5 Replicas: 0.0 Joules
+
+luish@luish-HP-Laptop-14-dq0xxx:
+  CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane: 38.23 Joules
+  CPU Request 1, CPU Limit 100m on 2 Nodes and Control Plane: 39.54 Joules
+  CPU Request 1, CPU Limit 200m on 1 Nodes and Control Plane: 44.7 Joules
+  CPU Request 1, CPU Limit 200m on 2 Nodes and Control Plane: 38.59 Joules
+  CPU Request 2, CPU Limit 100m on 1 Nodes and Control Plane: 5.17 Joules
+  CPU Request 2, CPU Limit 100m on 2 Nodes and Control Plane: 5.34 Joules
+  CPU Request 2, CPU Limit 200m on 1 Nodes and Control Plane: 5.27 Joules
+  CPU Request 2, CPU Limit 200m on 2 Nodes and Control Plane: 5.15 Joules
+  1 Replicas: 129.7 Joules
+  3 Replicas: 9.75 Joules
+  5 Replicas: 0.0 Joules
+

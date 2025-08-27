@@ -1,0 +1,38 @@
+Experiment: 1 CPU Configuration
+Experiment: Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.14 Watts
+Total Energy : 2.10 Joules
+Experiment: Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 1.66 Watts
+Total Energy : 24.89 Joules
+Experiment: Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.01 Watts
+Total Energy : 0.15 Joules
+Experiment: 2 CPU Configuration
+Experiment: 2 CPUs on All Nodes
+Experiment: Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.05 Watts
+Total Energy : 0.82 Joules
+Experiment: Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 1.94 Watts
+Total Energy : 29.12 Joules
+Experiment: Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.01 Watts
+Total Energy : 0.17 Joules
+Experiment: 2 CPUs on Single Node (Cordoned)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------

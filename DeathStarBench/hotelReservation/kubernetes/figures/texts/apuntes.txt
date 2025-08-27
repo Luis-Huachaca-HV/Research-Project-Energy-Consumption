@@ -1,0 +1,30 @@
+20demayo:
+- volver a usar experimentos para cruzar resultados
+- variables a cruzar, cantidad de conexiones, sd, nic,ram, threads definirlo a 4 por la cantidad de cpu10
+- implementar otro benchmark teastore
+Grafica de requests:
+- poner menos texto
+- no poner el nro de threads
+- num cons =  num threads
+- duracion 
+- tiempo de ejecucion f
+- request por segundo -> se enviara 2mil request por segundo, poner ejemplo
+- las variables, poner las variables de entrada
+- la arquitectura tiene una interaccion, con el frontend.
+- hacer documentos parados uno encima de otro simulando los requests
+- -t num threads
+- L: latencias, despues enter, poner, despues poner -s, de donde poner 
+- enter, poner el codigo que ejecuta el request que esta entrando
+- enter, http localhost 500 
+- poner esto en una hojita para definir tod
+- debajo del input poner un cuadro, poner el nthreads, nhilos, n con, 
+- nthreads puede ser mayor igual al nro de hilos
+- req per seq: request por segundo: ejemlpo reqperseq igual 2mil
+- las variables de entrada estaran con una flechita hacia abajo donde especificaran las variables
+- poner la latencias
+- los documentos entraran al frontend de la arquitectura
+- los servicios poner un solo cuadrado
+- tiene que tener conexiones, 
+- hay que hacer un flujo del que va de la arquitectura y como interactua la arquitectura. 
+- outputs: el cuadrado grande se ejecuta e interactua work2 que da la salida, todo esto se ejecuta 
+- va ir tmoando tiempo variables. 
