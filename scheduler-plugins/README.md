@@ -9,10 +9,14 @@ Este directorio contiene el **plugin EnergyScore** y los parches necesarios para
    git clone https://github.com/kubernetes-sigs/scheduler-plugins.git
    cd scheduler-plugins
 2. Copiar el plugin de energy score en el nuevo pkg:
+   ```bash
    cp -r ../Research-Project-Energy-Consumption/scheduler-plugins/pkg/energyscore pkg/
-3. Aplicar los parches:
+4. Aplicar los parches:
+   ```bash
    git apply ../Research-Project-Energy-Consumption/scheduler-plugins/patches/*.patch
-4. Copiar las configuraciones:
+6. Copiar las configuraciones:
+   ```bash
    cp ../Research-Project-Energy-Consumption/scheduler-plugins/configs/*.yaml ./config/
-5. Compilar:
+8. Compilar:
+   ```bash
    make build
