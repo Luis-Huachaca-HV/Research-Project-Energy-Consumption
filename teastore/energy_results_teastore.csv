@@ -1,0 +1,49 @@
+==== Inicio de medición de energía sin plugin stand by====
+Hora: mar. 08 juil. 2025 16:59:07 -05
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 2.32 Watts
+Total Energy : 30.13 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.21 Watts
+Total Energy : 3.01 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.56 Watts
+Total Energy : 6.77 Joules
+
+==== Inicio de medición de energía con plugin stand by====
+Hora: mar. 08 juil. 2025 17:33:54 -05
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.91 Watts
+Total Energy : 10.93 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.20 Watts
+Total Energy : 2.76 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.47 Watts
+Total Energy : 6.12 Joules
+
+
+
+==== Inicio de medición de energía con plugin sobrecarga====
+Hora: mar. 08 juil. 2025 18:09:43 -05
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.98 Watts
+Total Energy : 12.72 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.19 Watts
+Total Energy : 2.59 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.29 Watts
+Total Energy : 4.57 Joules
+
+==== Inicio de medición de energía sin plugin sobrecarga====
+Hora: mar. 08 juil. 2025 18:17:17 -05
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 0.89 Watts
+Total Energy : 11.61 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+Average Power : 0.22 Watts
+Total Energy : 2.58 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+Average Power : 0.34 Watts
+Total Energy : 5.39 Joules

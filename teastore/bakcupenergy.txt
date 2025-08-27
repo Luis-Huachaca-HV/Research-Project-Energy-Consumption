@@ -1,0 +1,11 @@
+==== Inicio de medición de energía ====
+Hora: mar. 08 juil. 2025 16:59:07 -05
+Local Machine (luish-Nitro-AN515-57)
+Average Power : 2.32 Watts
+Total Energy : 30.13 Joules
+Remote Machine (luish@luish-Aspire-A315-55G)
+[sudo] password for luish: Average Power : 0.21 Watts
+Total Energy : 3.01 Joules
+Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
+[sudo] password for luish: Average Power : 0.56 Watts
+Total Energy : 6.77 Joules
