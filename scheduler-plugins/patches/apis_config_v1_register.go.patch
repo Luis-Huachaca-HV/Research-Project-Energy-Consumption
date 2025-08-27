@@ -1,0 +1,13 @@
+diff --git a/apis/config/v1/register.go b/apis/config/v1/register.go
+index ba97d7a0..76b53703 100644
+--- a/apis/config/v1/register.go
++++ b/apis/config/v1/register.go
+@@ -47,6 +47,8 @@ func addKnownTypes(scheme *runtime.Scheme) error {
+ 		&NetworkOverheadArgs{},
+ 		&SySchedArgs{},
+ 		&PeaksArgs{},
++		&EnergyScoreArgs{},
++
+ 	)
+ 	return nil
+ }

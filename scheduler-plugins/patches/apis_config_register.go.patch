@@ -1,0 +1,25 @@
+diff --git a/apis/config/register.go b/apis/config/register.go
+index 57a33a0c..86c5bb12 100644
+--- a/apis/config/register.go
++++ b/apis/config/register.go
+@@ -20,8 +20,10 @@ import (
+ 	"k8s.io/apimachinery/pkg/runtime"
+ 	"k8s.io/apimachinery/pkg/runtime/schema"
+ 	schedconfig "k8s.io/kubernetes/pkg/scheduler/apis/config"
++
+ )
+ 
++
+ // SchemeGroupVersion is group version used to register these objects
+ var SchemeGroupVersion = schema.GroupVersion{Group: schedconfig.GroupName, Version: runtime.APIVersionInternal}
+ 
+@@ -45,6 +47,9 @@ func addKnownTypes(scheme *runtime.Scheme) error {
+ 		&NetworkOverheadArgs{},
+ 		&SySchedArgs{},
+ 		&PeaksArgs{},
++		&EnergyScoreArgs{},
++
++
+ 	)
+ 	return nil
+ }
