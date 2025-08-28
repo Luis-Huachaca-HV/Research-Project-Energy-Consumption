@@ -103,9 +103,18 @@ cp <repo route>/ecofloc/server_info.txt <your route>/ecofloc/
 
 En cada nodo del clúster, edita el archivo `/etc/hosts` para mapear correctamente los **hostnames** e **IP addresses** de todos los nodos.
 
+Para reconocer el ip de la propia maquina se hace:
+```
+luish@luish-Nitro-AN515-57:~$ hostname -I
+172.16.167.25 172.17.0.1 
+#172.16.167.25 es el ip que colocare en mis hosts
+```
+
 Ejemplo en el nodo master:
 
 ```
+-> sudo nano /etc/hosts
+
 127.0.0.1       localhost
 127.0.1.1       luish-Nitro-AN515-57
 192.168.18.35   luish-Nitro-AN515-57
