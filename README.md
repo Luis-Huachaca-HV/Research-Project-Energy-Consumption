@@ -1,13 +1,15 @@
 
 # DeathStarBench - Experimentos de Consumo Energético
 
-Este repositorio contiene el despliegue y experimentación de **DeathStarBench**, con el microservicio **HotelReservation**, sobre un clúster de Kubernetes. El objetivo es medir el consumo energético de las aplicaciones mediante la integración con la herramienta **Ecofloc**.
+Este repositorio contiene el despliegue y experimentación de **DeathStarBench**, con el microservicio **HotelReservation**, sobre un clúster de Kubernetes.  
+El objetivo es medir el **consumo energético** de las aplicaciones mediante la integración con la herramienta **Ecofloc**.
 
 ---
 
 ## 1. Requisitos previos
 
-Antes de ejecutar los experimentos, es necesario contar con un clúster Kubernetes configurado. Se recomienda usar **3 máquinas** (1 master + 2 workers).
+Antes de ejecutar los experimentos, es necesario contar con un **clúster Kubernetes** configurado.  
+Se recomienda usar **3 máquinas** (1 master + 2 workers) conectadas a la **misma red local**.
 
 ### Instalación de Docker
 Puedes instalar Docker en Ubuntu 22.04 siguiendo una de estas opciones:
@@ -34,12 +36,63 @@ kubectl get nodes
 
 ---
 
-## 2. Verificación del despliegue
+## 2. Configuración de Ecofloc
+
+Para la medición de energía se utiliza **Ecofloc**, en una versión específica previa a las últimas actualizaciones.
+Debes clonar el repositorio y mantenerte en el **commit usado en este proyecto**.
+
+### Archivos de configuración
+
+* En cada archivo `features.conf` (`cpu`, `ram`, `nic`, `sd`), configura el **factor de potencia** y los parámetros de hardware de tu máquina.
+* En cada archivo `settings.conf`, ajusta la **ruta donde se guardarán los CSV** generados por Ecofloc.
+
+### Compilación
+
+```bash
+make
+```
+
+⚠️ Antes de ejecutar los experimentos, valida que Ecofloc funciona ejecutando los ejemplos provistos en el README de esa versión del repositorio.
+
+### Sincronización de versiones
+
+Una vez validado, copia los archivos `.c` modificados de este proyecto hacia tu instalación de Ecofloc y recompila:
+
+```bash
+cp /ruta/proyecto/ecofloc-*.c /ruta/ecofloc-descargado/
+make clean && make
+```
+
+---
+
+## 3. Configuración de hosts y comunicación entre nodos
+
+En cada nodo del clúster, edita el archivo `/etc/hosts` para mapear correctamente los **hostnames** e **IP addresses** de todos los nodos.
+
+Ejemplo en el nodo master:
+
+```
+127.0.0.1       localhost
+127.0.1.1       luish-Nitro-AN515-57
+192.168.18.35   luish-Nitro-AN515-57
+192.168.18.30   luish-Aspire-A315-55G
+192.168.18.29   luish-HP-Laptop-14-dq0xxx
+```
+
+Prueba la conexión con:
+
+```bash
+ssh usuario@hostname
+```
+
+---
+
+## 4. Verificación del despliegue
 
 Una vez configurado el cluster, desplegar el servicio **HotelReservation**:
 
 ```bash
-kubectl apply -Rf /home/luish/Documents/death/DeathStarBench/hotelReservation/kubernetes/
+kubectl apply -Rf /ruta/DeathStarBench/hotelReservation/kubernetes/
 ```
 
 Espera \~10 segundos y verifica que los pods estén corriendo:
@@ -50,9 +103,11 @@ kubectl get pods
 
 ---
 
-## 3. Configuración de Ecofloc (medición de energía)
+## 5. Configuración de Ecofloc con PIDs del cluster
 
-El script `gepidsh.sh` se encarga de recolectar los PIDs de los procesos del cluster en cada nodo y configurarlos para Ecofloc.
+Dentro de la carpeta `hotelReservation/kubernetes/` se encuentra el script `gepidsh.sh`.
+Este script recolecta los **PIDs** de los procesos del cluster en cada nodo y los configura para Ecofloc.
+
 Ejemplo de configuración dentro del script:
 
 ```bash
@@ -62,29 +117,29 @@ remote_computers_list=("luish@luish-Aspire-A315-55G" "luish@luish-HP-Laptop-14-d
 sudo_password="238244758"
 
 declare -A remote_computers_map
-remote_computers_map["luish@luish-Aspire-A315-55G"]="/home/luish/Documents/p3/ecofloc2/ecofloc"
-remote_computers_map["luish-HP-Laptop-14-dq0xxx"]="/home/luish/Documents/p3/ecofloc"
+remote_computers_map["luish@luish-Aspire-A315-55G"]="/home/luish/Documents/p3/ecofloc"
+remote_computers_map["luish@luish-HP-Laptop-14-dq0xxx"]="/home/luish/Documents/p3/ecofloc"
 ```
 
-Ejecuta:
+Ejecutar:
 
 ```bash
 ./gepidsh.sh
 ```
 
-Verifica que cada nodo tenga un archivo `.txt` con los PIDs correctos.
+Verifica que en cada nodo el archivo `pids.txt` haya sido actualizado correctamente.
 
 ---
 
-## 4. Ejecución del experimento
+## 6. Ejecución del experimento
 
-1. Desplegar la arquitectura (si no lo hiciste ya):
+1. Desplegar la arquitectura:
 
    ```bash
-   kubectl apply -Rf /home/luish/Documents/death/DeathStarBench/hotelReservation/kubernetes/
+   kubectl apply -Rf /ruta/DeathStarBench/hotelReservation/kubernetes/
    ```
 
-2. Esperar 10 segundos y abrir tres terminales diferentes:
+2. Abrir tres terminales:
 
    **Terminal 1** – Jaeger:
 
@@ -104,19 +159,19 @@ Verifica que cada nodo tenga un archivo `.txt` con los PIDs correctos.
    wrk -t 2 -c 2 -d 30 -L -s ./mixed-workload_type_1.lua http://localhost:5000 -R 2
    ```
 
-   Si `wrk` falla, espera unos segundos más y vuelve a ejecutar.
+   ⚠️ Si `wrk` falla, espera unos segundos más y vuelve a ejecutar.
 
-3. Ejecutar el script de despliegue + medición:
+3. Ejecutar el script de despliegue y medición:
 
    ```bash
    ./deploycomp.sh
    ```
 
-   ⚠️ Nota: el `wrk` debe seguir corriendo durante más tiempo que `deploycomp.sh`.
+   ✅ Nota: el `wrk` debe correr durante más tiempo que `deploycomp.sh`.
 
 ---
 
-## 5. Resultados
+## 7. Resultados
 
 Al finalizar, se generan archivos `.txt` con los resultados de consumo energético en cada máquina.
 El formato esperado es:
@@ -136,18 +191,17 @@ Average Power : 2.27 Watts
 Total Energy : 45.44 Joules
 ```
 
-En algunos casos el formato puede tener caracteres extra. Corrige manualmente si es necesario.
+En algunos casos el formato puede incluir caracteres extra. Corrige manualmente si es necesario.
 
 ---
 
-## 6. Análisis de resultados y gráficos
+## 8. Análisis y gráficos
 
 Dentro de la carpeta `figures/scripts/` se incluyen varios scripts en Python para procesar los resultados y generar gráficos:
 
 ```bash
 cd DeathStarBench/hotelReservation/kubernetes/figures/scripts/
 
-# Análisis y visualización
 python3 analisis.py
 python3 comp.py
 python3 graphics.py
@@ -155,27 +209,30 @@ python3 merge.py
 python3 score.py
 ```
 
-Estos generan comparaciones visuales de energía, rendimiento y consumo.
-
 ---
 
-## 7. Resumen del flujo completo
+## 9. Flujo resumido
 
 1. Instalar Docker + Kubernetes.
 2. Configurar clúster (1 master + 2 workers).
-3. Desplegar **HotelReservation** en Kubernetes.
-4. Ejecutar `gepidsh.sh` para configurar Ecofloc.
-5. Lanzar Jaeger, Frontend y `wrk` en paralelo.
-6. Ejecutar `deploycomp.sh` para medir consumo energético.
-7. Verificar resultados `.txt` y generar gráficos con scripts en `figures/scripts`.
+3. Instalar y compilar versión específica de Ecofloc.
+4. Ajustar `features.conf` y `settings.conf` en Ecofloc.
+5. Editar `/etc/hosts` en todos los nodos para comunicación SSH.
+6. Ejecutar `gepidsh.sh` para recolectar PIDs.
+7. Desplegar **HotelReservation** en Kubernetes.
+8. Lanzar Jaeger, Frontend y `wrk` en paralelo.
+9. Ejecutar `deploycomp.sh` para medición.
+10. Revisar resultados y graficar con scripts en `figures/scripts`.
 
 ---
 
 ## Créditos
 
-Basado en el benchmark **DeathStarBench** y la herramienta de medición energética **Ecofloc**.
-Trabajo experimental realizado por **Luis Huachaca Vargas**.
+* Benchmark: **DeathStarBench**
+* Herramienta de medición: **Ecofloc**
+* Experimentos realizados por: **Luis Huachaca Vargas**
 
 ```
 
 ---
+
