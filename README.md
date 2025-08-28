@@ -36,10 +36,35 @@ kubectl get nodes
 
 ---
 
+
 ## 2. Configuración de Ecofloc
 
 Para la medición de energía se utiliza **Ecofloc**, en una versión específica previa a las últimas actualizaciones.
 Debes clonar el repositorio y mantenerte en el **commit usado en este proyecto**.
+
+### Versión utilizada
+
+Este proyecto utiliza Ecofloc en el commit:
+
+```
+
+commit ebd2c7a2cf173e75286415919abbe99888e5e984
+Author: Humberto [hhumberto.av@gmail.com](mailto:hhumberto.av@gmail.com)
+Date:   Fri Nov 22 23:53:24 2024 +0100
+
+```
+fixed installer and Makefile
+```
+
+````
+
+Para asegurarte de estar en esta versión exacta, clona y haz checkout:
+
+```bash
+git clone https://github.com/hhumberto/ecofloc.git
+cd ecofloc
+git checkout ebd2c7a2cf173e75286415919abbe99888e5e984
+````
 
 ### Archivos de configuración
 
@@ -63,7 +88,13 @@ cp /ruta/proyecto/ecofloc-*.c /ruta/ecofloc-descargado/
 make clean && make
 ```
 
+```
+
 ---
+
+¿Quieres que te lo prepare como **parche listo para pegar en tu README.md** (lo edito directo con `sed`/`echo`), o prefieres que solo copies y reemplaces manualmente esta sección?
+```
+
 
 ## 3. Configuración de hosts y comunicación entre nodos
 
