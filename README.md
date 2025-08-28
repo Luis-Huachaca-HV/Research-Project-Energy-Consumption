@@ -113,8 +113,10 @@ luish@luish-Nitro-AN515-57:~$ hostname -I
 Ejemplo en el nodo master:
 
 ```
--> sudo nano /etc/hosts
+ sudo nano /etc/hosts
+ ```
 
+```
 127.0.0.1       localhost
 127.0.1.1       luish-Nitro-AN515-57
 192.168.18.35   luish-Nitro-AN515-57
@@ -146,6 +148,11 @@ Espera \~10 segundos y verifica que los pods estén corriendo:
 kubectl get pods
 ```
 
+Ahora cerraremos para sacar los pids, se desplegara despues para el experimento.
+```bash
+kubectl delete -Rf /ruta/DeathStarBench/hotelReservation/kubernetes/
+```
+
 ---
 
 ## 5. Configuración de Ecofloc con PIDs del cluster
@@ -156,14 +163,14 @@ Este script recolecta los **PIDs** de los procesos del cluster en cada nodo y lo
 Ejemplo de configuración dentro del script:
 
 ```bash
-YAML_DIR="/home/luish/Documents/death/DeathStarBench/hotelReservation/kubernetes"
+YAML_DIR="/home/luish/Documents/death/DeathStarBench/hotelReservation/kubernetes" (colocar tu ruta)
 
-remote_computers_list=("luish@luish-Aspire-A315-55G" "luish@luish-HP-Laptop-14-dq0xxx")
-sudo_password="238244758"
+remote_computers_list=("luish@luish-Aspire-A315-55G" "luish@luish-HP-Laptop-14-dq0xxx") (indicar los usuario@name de tu nodo)
+sudo_password="238244758" (indicar tu sudo password)
 
 declare -A remote_computers_map
-remote_computers_map["luish@luish-Aspire-A315-55G"]="/home/luish/Documents/p3/ecofloc"
-remote_computers_map["luish@luish-HP-Laptop-14-dq0xxx"]="/home/luish/Documents/p3/ecofloc"
+remote_computers_map["luish@luish-Aspire-A315-55G"]="/home/luish/Documents/p3/ecofloc" (indicar la direccion de ecofloc en tu nodo)
+remote_computers_map["luish@luish-HP-Laptop-14-dq0xxx"]="/home/luish/Documents/p3/ecofloc" (indicar la direccion de ecofloc en tu nodo)
 ```
 
 Ejecutar:
@@ -185,6 +192,10 @@ Verifica que en cada nodo el archivo `pids.txt` haya sido actualizado correctame
    ```
 
 2. Abrir tres terminales:
+
+   Estos terminales nos sirven para desviar algunos puertos del sobrecargador, antes de esto deberiamos seguir la documentacion del repositorio para la carga de trabajo, si la documentacion falla, seguiriamos esta propuesta: https://github.com/delimitrou/DeathStarBench/tree/master/hotelReservation/kubernetes
+
+   Considerar que debemos descargar "wrk", la herramienta de generador de cargas: https://nitikagarw.medium.com/getting-started-with-wrk-and-wrk2-benchmarking-6e3cdc76555f
 
    **Terminal 1** – Jaeger:
 
@@ -218,7 +229,7 @@ Verifica que en cada nodo el archivo `pids.txt` haya sido actualizado correctame
 
 ## 7. Resultados
 
-Al finalizar, se generan archivos `.txt` con los resultados de consumo energético en cada máquina.
+Al finalizar, se generan archivos `.txt` con los resultados de consumo energético en la maquina principal.
 El formato esperado es:
 
 ```
