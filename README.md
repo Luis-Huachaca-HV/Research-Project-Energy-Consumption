@@ -53,10 +53,7 @@ Author: Humberto [hhumberto.av@gmail.com](mailto:hhumberto.av@gmail.com)
 Date:   Fri Nov 22 23:53:24 2024 +0100
 
 ```
-fixed installer and Makefile
-```
 
-````
 
 Para asegurarte de estar en esta versión exacta, clona y haz checkout:
 
@@ -64,7 +61,7 @@ Para asegurarte de estar en esta versión exacta, clona y haz checkout:
 git clone https://github.com/hhumberto/ecofloc.git
 cd ecofloc
 git checkout ebd2c7a2cf173e75286415919abbe99888e5e984
-````
+```
 
 ### Archivos de configuración
 
