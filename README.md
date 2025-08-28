@@ -77,7 +77,7 @@ git checkout ebd2c7a2cf173e75286415919abbe99888e5e984
 make
 ```
 
-⚠️ Antes de ejecutar los experimentos, valida que Ecofloc funciona ejecutando los ejemplos provistos en el README de esa versión del repositorio.
+Antes de ejecutar los experimentos, valida que Ecofloc funciona ejecutando los ejemplos provistos en el README de esa versión del repositorio.
 
 ### Sincronización de versiones
 
@@ -88,11 +88,17 @@ cp /ruta/proyecto/ecofloc-*.c /ruta/ecofloc-descargado/
 make clean && make
 ```
 
-```
+reemplaza todos los .c con los .c de este repo.
 
----
+```bash
+# Copiar archivos modificados desde tu repo de investigación hacia tu instalación local de Ecofloc
+cp -r <repo route>/ecofloc/ecofloc-cpu/* <your route>/ecofloc/ecofloc-cpu/
+cp -r <repo route>/ecofloc/ecofloc-gpu/* <your route>/ecofloc/ecofloc-gpu/
+cp -r <repo route>/ecofloc/ecofloc-nic/* <your route>/ecofloc/ecofloc-nic/
+cp -r <repo route>/ecofloc/ecofloc-ram/* <your route>/ecofloc/ecofloc-ram/
+cp -r <repo route>/ecofloc/ecofloc-sd/* <your route>/ecofloc/ecofloc-sd/
+cp <repo route>/ecofloc/server_info.txt <your route>/ecofloc/
 
-¿Quieres que te lo prepare como **parche listo para pegar en tu README.md** (lo edito directo con `sed`/`echo`), o prefieres que solo copies y reemplaces manualmente esta sección?
 ```
 
 
