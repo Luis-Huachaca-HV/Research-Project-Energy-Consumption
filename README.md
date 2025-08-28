@@ -134,6 +134,8 @@ ssh usuario@hostname
 
 Una vez configurado el cluster, desplegar el servicio **HotelReservation**:
 
+Se puede seguir la documentacion de ejecucion del benchmark: https://github.com/delimitrou/DeathStarBench/tree/master/hotelReservation/kubernetes
+
 ```bash
 kubectl apply -Rf /ruta/DeathStarBench/hotelReservation/kubernetes/
 ```
