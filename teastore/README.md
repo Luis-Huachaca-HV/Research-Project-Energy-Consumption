@@ -16,5 +16,17 @@ This folder contains scripts, results, and configurations related to our energy 
 
 1. Clone the official TeaStore repository and deploy the services:
    ```bash
-   git clone https://github.com/DescartesResearch/TeaStore.git
+   git clone https://github.com/DescartesResearch/TeaStore.git```
+
 2. Follow the installation there and copy these files in the folder, then exe
+
+
+## Ejecucion del Experimento
+
+   Seguir la documentacion para desplegar la experimentacion: https://github.com/DescartesResearch/TeaStore/blob/master/GET_STARTED.md#13-run-the-teastore-on-a-kubernetes-cluster
+   
+
+   Ejecutar el experimento de generador de cargas de request incrementales.
+
+   Ejecutar gepids.sh
+
