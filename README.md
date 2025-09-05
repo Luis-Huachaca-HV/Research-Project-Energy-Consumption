@@ -1,11 +1,10 @@
 
-```markdown
 # Research Project: Energy Consumption ⚡️🖥️  
 
-This repo is a **lab playground** for energy consumption experiments across multiple distributed systems and benchmarks.  
-Think of it as a **zoo of workloads + tools** wired up to measure CPU, RAM, and power usage with **Ecofloc** (our main energy profiler).  
 
----
+This repo is a **lab playground** for energy consumption experiments across multiple distributed systems and benchmarks.  
+Think of it as a **zoo of workloads + tools** wired up to measure CPU, RAM, and power usage with **Ecofloc** (our main energy profiler).
+
 
 ## Repo Map 🗺️  
 
