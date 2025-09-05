@@ -1,6 +1,4 @@
-Aquí tienes tu README reescrito en **estilo geek, en inglés y conciso**, manteniendo toda la información técnica:
 
-````markdown
 # DeathStarBench - Energy Experiments ⚡️
 
 Repo for deploying and benchmarking **DeathStarBench**, focusing on the **HotelReservation** microservice on a Kubernetes cluster.  
