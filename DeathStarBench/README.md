@@ -28,6 +28,7 @@ kubectl get nodes
 ````
 
 ---
+Then you have to deploy the DB Architecture, following the tutorial of Death Star Bench.
 
 ## 2. Ecofloc Setup
 
