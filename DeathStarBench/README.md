@@ -1,34 +1,29 @@
+Aquí tienes tu README reescrito en **estilo geek, en inglés y conciso**, manteniendo toda la información técnica:
 
-# DeathStarBench - Experimentos de Consumo Energético
+````markdown
+# DeathStarBench - Energy Experiments ⚡️
 
-Este repositorio contiene el despliegue y experimentación de **DeathStarBench**, con el microservicio **HotelReservation**, sobre un clúster de Kubernetes.  
-El objetivo es medir el **consumo energético** de las aplicaciones mediante la integración con la herramienta **Ecofloc**.
+Repo for deploying and benchmarking **DeathStarBench**, focusing on the **HotelReservation** microservice on a Kubernetes cluster.  
+Goal: measure **energy consumption** using **Ecofloc**.
 
 ---
 
-## 1. Requisitos previos
+## 1. Prerequisites
 
-Antes de ejecutar los experimentos, es necesario contar con un **clúster Kubernetes** configurado.  
-Se recomienda usar **3 máquinas** (1 master + 2 workers) conectadas a la **misma red local**.
+- Kubernetes cluster ready (recommended: 3 nodes → 1 master + 2 workers, same LAN).
+- Docker + Docker Compose installed.
+- Ubuntu 22.04 recommended.
 
-### Instalación de Docker
-Puedes instalar Docker en Ubuntu 22.04 siguiendo una de estas opciones:
+### Docker
 
-- Opción 1 (Docker Desktop):  
-  [Instalar Docker Desktop en Ubuntu](https://docs.docker.com/desktop/setup/install/linux/ubuntu/)
+- **Option 1 (Docker Desktop):** [Install Docker Desktop](https://docs.docker.com/desktop/setup/install/linux/ubuntu/)  
+- **Option 2 (Docker CLI + Compose, recommended):** [Guide](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-22-04)
 
-- Opción 2 (recomendada):  
-  [Instalar Docker + Docker Compose en Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-22-04)
+### Kubernetes
 
-### Instalación de Kubernetes (kubeadm)
-Sigue la guía oficial de Kubernetes para instalar `kubeadm`:  
-[Instalar kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+Install `kubeadm` per [official docs](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm).
 
-### Configuración del cluster
-Puedes seguir este tutorial:  
-[How to set up a Kubernetes cluster on Ubuntu 22.04](https://medium.com/@kvihanga/how-to-set-up-a-kubernetes-cluster-on-ubuntu-22-04-lts-433548d9a7d0)
-
-Cuando el clúster esté listo, asegúrate de que los nodos estén disponibles:
+Verify nodes:
 
 ```bash
 kubectl get nodes
@@ -36,87 +31,20 @@ kubectl get nodes
 
 ---
 
+## 2. Ecofloc Setup
 
-## 2. Configuración de Ecofloc
+Use a **specific fork/version** of Ecofloc (LUIS HUACHACA version) (https://github.com/Luis-Huachaca-HV/ecofloc-microservices/tree/energy-experiments).
+Install on all nodes, configure `features.conf` and `settings.conf` per node.
 
-Para la medición de energía se utiliza **Ecofloc**, en una versión específica previa a las últimas actualizaciones.
-Debes clonar el repositorio y mantenerte en el **commit usado en este proyecto**.
+---
 
-### Versión utilizada
+## 3. Hosts & Node Communication
 
-Este proyecto utiliza Ecofloc en el commit:
+Edit `/etc/hosts` on each node to map hostnames → IPs.
 
-```
-
-commit ebd2c7a2cf173e75286415919abbe99888e5e984
-Author: Humberto [hhumberto.av@gmail.com](mailto:hhumberto.av@gmail.com)
-Date:   Fri Nov 22 23:53:24 2024 +0100
-
-```
-
-
-Para asegurarte de estar en esta versión exacta, clona y haz checkout:
+Example master node:
 
 ```bash
-git clone https://github.com/hhumberto/ecofloc.git
-cd ecofloc
-git checkout ebd2c7a2cf173e75286415919abbe99888e5e984
-```
-
-### Archivos de configuración
-
-* En cada archivo `features.conf` (`cpu`, `ram`, `nic`, `sd`), configura el **factor de potencia** y los parámetros de hardware de tu máquina.
-* En cada archivo `settings.conf`, ajusta la **ruta donde se guardarán los CSV** generados por Ecofloc.
-
-### Compilación
-
-```bash
-make
-```
-
-Antes de ejecutar los experimentos, valida que Ecofloc funciona ejecutando los ejemplos provistos en el README de esa versión del repositorio.
-
-### Sincronización de versiones
-
-Una vez validado, copia los archivos `.c` modificados de este proyecto hacia tu instalación de Ecofloc y recompila:
-
-```bash
-cp /ruta/proyecto/ecofloc-*.c /ruta/ecofloc-descargado/
-make clean && make
-```
-
-reemplaza todos los .c con los .c de este repo.
-
-```bash
-# Copiar archivos modificados desde tu repo de investigación hacia tu instalación local de Ecofloc
-cp -r <repo route>/ecofloc/ecofloc-cpu/* <your route>/ecofloc/ecofloc-cpu/
-cp -r <repo route>/ecofloc/ecofloc-gpu/* <your route>/ecofloc/ecofloc-gpu/
-cp -r <repo route>/ecofloc/ecofloc-nic/* <your route>/ecofloc/ecofloc-nic/
-cp -r <repo route>/ecofloc/ecofloc-ram/* <your route>/ecofloc/ecofloc-ram/
-cp -r <repo route>/ecofloc/ecofloc-sd/* <your route>/ecofloc/ecofloc-sd/
-cp <repo route>/ecofloc/server_info.txt <your route>/ecofloc/
-
-```
-
-
-## 3. Configuración de hosts y comunicación entre nodos
-
-En cada nodo del clúster, edita el archivo `/etc/hosts` para mapear correctamente los **hostnames** e **IP addresses** de todos los nodos.
-
-Para reconocer el ip de la propia maquina se hace:
-```
-luish@luish-Nitro-AN515-57:~$ hostname -I
-172.16.167.25 172.17.0.1 
-#172.16.167.25 es el ip que colocare en mis hosts
-```
-
-Ejemplo en el nodo master:
-
-```
- sudo nano /etc/hosts
- ```
-
-```
 127.0.0.1       localhost
 127.0.1.1       luish-Nitro-AN515-57
 192.168.18.35   luish-Nitro-AN515-57
@@ -124,140 +52,126 @@ Ejemplo en el nodo master:
 192.168.18.29   luish-HP-Laptop-14-dq0xxx
 ```
 
-Prueba la conexión con:
+Test SSH connectivity:
 
 ```bash
-ssh usuario@hostname
+ssh user@hostname
 ```
 
 ---
 
-## 4. Verificación del despliegue
+## 4. Deploy HotelReservation
 
-Una vez configurado el cluster, desplegar el servicio **HotelReservation**:
-
-Se puede seguir la documentacion de ejecucion del benchmark: https://github.com/delimitrou/DeathStarBench/tree/master/hotelReservation/kubernetes
+Follow DeathStarBench docs: [Kubernetes Deployment](https://github.com/delimitrou/DeathStarBench/tree/master/hotelReservation/kubernetes)
 
 ```bash
-kubectl apply -Rf /ruta/DeathStarBench/hotelReservation/kubernetes/
-```
-
-Espera \~10 segundos y verifica que los pods estén corriendo:
-
-```bash
+kubectl apply -Rf /path/to/DeathStarBench/hotelReservation/kubernetes/
 kubectl get pods
 ```
 
-Ahora cerraremos para sacar los pids, se desplegara despues para el experimento.
+Stop to collect PIDs:
+
 ```bash
-kubectl delete -Rf /ruta/DeathStarBench/hotelReservation/kubernetes/
+kubectl delete -Rf /path/to/DeathStarBench/hotelReservation/kubernetes/
 ```
 
 ---
 
-## 5. Configuración de Ecofloc con PIDs del cluster
+## 5. Collect Cluster PIDs for Ecofloc
 
-Dentro de la carpeta `hotelReservation/kubernetes/` se encuentra el script `gepidsh.sh`.
-Este script recolecta los **PIDs** de los procesos del cluster en cada nodo y los configura para Ecofloc.
+`gepidsh.sh` gathers **PIDs per node** for Ecofloc.
 
-Ejemplo de configuración dentro del script:
+Edit script with your paths:
 
 ```bash
-YAML_DIR="/home/luish/Documents/death/DeathStarBench/hotelReservation/kubernetes" (colocar tu ruta)
-
-remote_computers_list=("luish@luish-Aspire-A315-55G" "luish@luish-HP-Laptop-14-dq0xxx") (indicar los usuario@name de tu nodo)
-sudo_password="238244758" (indicar tu sudo password)
+YAML_DIR="/home/luish/Documents/death/DeathStarBench/hotelReservation/kubernetes"
+remote_computers_list=("luish@luish-Aspire-A315-55G" "luish@luish-HP-Laptop-14-dq0xxx")
+sudo_password="238244758"
 
 declare -A remote_computers_map
-remote_computers_map["luish@luish-Aspire-A315-55G"]="/home/luish/Documents/p3/ecofloc" (indicar la direccion de ecofloc en tu nodo)
-remote_computers_map["luish@luish-HP-Laptop-14-dq0xxx"]="/home/luish/Documents/p3/ecofloc" (indicar la direccion de ecofloc en tu nodo)
+remote_computers_map["luish@luish-Aspire-A315-55G"]="/home/luish/Documents/p3/ecofloc"
+remote_computers_map["luish@luish-HP-Laptop-14-dq0xxx"]="/home/luish/Documents/p3/ecofloc"
 ```
 
-Ejecutar:
+Run:
 
 ```bash
 ./gepidsh.sh
 ```
 
-Verifica que en cada nodo el archivo `pids.txt` haya sido actualizado correctamente.
+Check that `pids.txt` is updated on each node.
 
 ---
 
-## 6. Ejecución del experimento
+## 6. Run Experiment
 
-1. Desplegar la arquitectura:
+1. Deploy cluster:
 
-   ```bash
-   kubectl apply -Rf /ruta/DeathStarBench/hotelReservation/kubernetes/
-   ```
+```bash
+kubectl apply -Rf /path/to/DeathStarBench/hotelReservation/kubernetes/
+```
 
-2. Abrir tres terminales:
+2. Open 3 terminals:
 
-   Estos terminales nos sirven para desviar algunos puertos del sobrecargador, antes de esto deberiamos seguir la documentacion del repositorio para la carga de trabajo, si la documentacion falla, seguiriamos esta propuesta: https://github.com/delimitrou/DeathStarBench/tree/master/hotelReservation/kubernetes
+* **Terminal 1 – Jaeger:**
 
-   Considerar que debemos descargar "wrk", la herramienta de generador de cargas: https://nitikagarw.medium.com/getting-started-with-wrk-and-wrk2-benchmarking-6e3cdc76555f
+```bash
+kubectl port-forward svc/jaeger 16686:16686 -n default
+```
 
-   **Terminal 1** – Jaeger:
+* **Terminal 2 – Frontend:**
 
-   ```bash
-   kubectl port-forward svc/jaeger 16686:16686 -n default
-   ```
+```bash
+kubectl port-forward svc/frontend 5000:5000 -n default
+```
 
-   **Terminal 2** – Frontend:
+* **Terminal 3 – Load Generation (`wrk`):**
 
-   ```bash
-   kubectl port-forward svc/frontend 5000:5000 -n default
-   ```
+```bash
+wrk -t2 -c2 -d30 -L -s ./mixed-workload_type_1.lua http://localhost:5000 -R2
+```
 
-   **Terminal 3** – Generación de carga:
+> Ensure `wrk` is installed: [Guide](https://nitikagarw.medium.com/getting-started-with-wrk-and-wrk2-benchmarking-6e3cdc76555f)
 
-   ```bash
-   wrk -t 2 -c 2 -d 30 -L -s ./mixed-workload_type_1.lua http://localhost:5000 -R 2
-   ```
+3. Run measurement script:
 
-   ⚠️ Si `wrk` falla, espera unos segundos más y vuelve a ejecutar.
+```bash
+./deploycomp.sh
+```
 
-3. Ejecutar el script de despliegue y medición:
-
-   ```bash
-   ./deploycomp.sh
-   ```
-
-   ✅ Nota: el `wrk` debe correr durante más tiempo que `deploycomp.sh`.
+> `wrk` should run longer than `deploycomp.sh` to capture full metrics.
 
 ---
 
-## 7. Resultados
+## 7. Results
 
-Al finalizar, se generan archivos `.txt` con los resultados de consumo energético en la maquina principal.
-El formato esperado es:
+Generated `.txt` files on the main node contain energy readings:
 
 ```
 Experiment: CPU Request 1, CPU Limit 100m on 1 Nodes and Control Plane
 Local Machine (luish-Nitro-AN515-57)
-Average Power : 0.14 Watts
-Total Energy : 2.77 Joules
+Average Power : 0.14 W
+Total Energy : 2.77 J
 
 Remote Machine (luish@luish-Aspire-A315-55G)
-Average Power : 0.23 Watts
-Total Energy : 4.34 Joules
+Average Power : 0.23 W
+Total Energy : 4.34 J
 
 Remote Machine (luish@luish-HP-Laptop-14-dq0xxx)
-Average Power : 2.27 Watts
-Total Energy : 45.44 Joules
+Average Power : 2.27 W
+Total Energy : 45.44 J
 ```
 
-En algunos casos el formato puede incluir caracteres extra. Corrige manualmente si es necesario.
+Clean manually if extra chars appear.
 
 ---
 
-## 8. Análisis y gráficos
+## 8. Analysis & Graphs
 
-Dentro de la carpeta `figures/scripts/` se incluyen varios scripts en Python para procesar los resultados y generar gráficos:
+Python scripts under `figures/scripts/` generate plots:
 
 ```bash
 cd DeathStarBench/hotelReservation/kubernetes/figures/scripts/
-
 python3 analisis.py
 python3 comp.py
 python3 graphics.py
@@ -267,28 +181,29 @@ python3 score.py
 
 ---
 
-## 9. Flujo resumido
+## 9. TL;DR Flow
 
-1. Instalar Docker + Kubernetes.
-2. Configurar clúster (1 master + 2 workers).
-3. Instalar y compilar versión específica de Ecofloc.
-4. Ajustar `features.conf` y `settings.conf` en Ecofloc.
-5. Editar `/etc/hosts` en todos los nodos para comunicación SSH.
-6. Ejecutar `gepidsh.sh` para recolectar PIDs.
-7. Desplegar **HotelReservation** en Kubernetes.
-8. Lanzar Jaeger, Frontend y `wrk` en paralelo.
-9. Ejecutar `deploycomp.sh` para medición.
-10. Revisar resultados y graficar con scripts en `figures/scripts`.
+1. Install Docker + Kubernetes
+2. Setup 3-node cluster
+3. Compile specific Ecofloc version
+4. Configure `features.conf` & `settings.conf`
+5. Update `/etc/hosts` for SSH
+6. Run `gepidsh.sh` to collect PIDs
+7. Deploy **HotelReservation**
+8. Launch Jaeger, Frontend, `wrk`
+9. Execute `deploycomp.sh`
+10. Review results & generate plots
 
 ---
 
-## Créditos
+## Credits
 
-* Benchmark: **DeathStarBench**
-* Herramienta de medición: **Ecofloc**
-* Experimentos realizados por: **Luis Huachaca Vargas**
+* **Benchmark:** DeathStarBench
+* **Profiler:** Ecofloc
+* **Experiments by:** Luis Huachaca Vargas
 
-```
+
+
 
 ---
 
