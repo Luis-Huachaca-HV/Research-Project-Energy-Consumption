@@ -29,7 +29,7 @@ kubectl get nodes
 
 ---
 
-##DEATH STAR BENCH
+#DEATH STAR BENCH
 Then you have to deploy the DB Architecture, following the tutorial of Death Star Bench.
 [https://github.com/delimitrou/DeathStarBench/tree/master/hotelReservation/kubernetes
 ](https://github.com/Luis-Huachaca-HV/DeathStarBench-Measuring-Energy)
