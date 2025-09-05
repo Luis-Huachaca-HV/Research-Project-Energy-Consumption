@@ -38,84 +38,12 @@ Ecofloc lets us **track actual energy per container**, which is the whole point 
 
 ### Install Ecofloc  
 
-Clone and build Ecofloc (inside this repo):  
+Go here and install on every machine:
+https://github.com/Luis-Huachaca-HV/ecofloc-microservices/tree/energy-experiments
 
-```bash
-cd ecofloc
-make build
-````
-
-Check it runs:
-
-```bash
-./ecofloc -h
-```
 
 ---
 
-## How Energy Is Measured 🔋
-
-1. Collect the PID(s) of running containers.
-2. Ecofloc attaches to those PIDs and tracks energy counters.
-
-Two main ways to launch Ecofloc:
-
-* **Threaded mode (manual attach)** → grab container PIDs and run Ecofloc per PID.
-* **Namespace mode (`-n`)** → Ecofloc auto-attaches to the container namespace (easier for batch experiments).
-
-👉 In this repo, we use **`-n` mode** most of the time (see examples in `ecofloc/README.md`).
-
----
-
-## Running Benchmarks ⚙️
-
-### DeathStarBench
-
-```bash
-cd DeathStarBench
-./run.sh
-```
-
-Monitor with Ecofloc in namespace mode:
-
-```bash
-./ecofloc -n <container_name_or_ns> -o results.json
-```
-
----
-
-### TeaStore
-
-```bash
-cd teastore
-docker-compose up -d
-```
-
-Track CPU/RAM + energy:
-
-```bash
-./ecofloc -n teastore_webui -o teastore_energy.json
-```
-
----
-
-## CPU + RAM Metrics 📊
-
-Besides energy, we log CPU and memory stats via:
-
-```bash
-docker stats --no-stream > resource_usage.log
-```
-
-Or, for more reproducible runs:
-
-```bash
-./ecofloc -n <container> --track-cpu --track-ram -o combined_metrics.json
-```
-
-This way, we can correlate **power ↔ CPU ↔ memory usage** per workload.
-
----
 
 ## References 📚
 
@@ -125,10 +53,4 @@ This way, we can correlate **power ↔ CPU ↔ memory usage** per workload.
 * [TeaStore](https://github.com/DescartesResearch/TeaStore) – Microservice demo app.
 
 ---
-
-👉 With this structure:
-
-* You’ve got one **global README** (this one) with the overview.
-* Each benchmark/tool keeps its own `README.md` with deployment quirks.
-* No local machine paths (`~/Documents/...`) are exposed.
 
