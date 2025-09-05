@@ -32,14 +32,37 @@ Ecofloc lets us **track actual energy per container**, which is the whole point 
 ### Prerequisites  
 
 - Docker + Docker Compose  
-- Kubernetes (for `scheduler-plugins`)  
+- Kubernetes 
 - Python ≥ 3.10 (for Ecofloc tools)  
-- A machine with RAPL or similar energy counters (otherwise Ecofloc is blind ⚡️👀)  
+- A machine with RAPL or similar energy counters 
+- Ecofloc Requirements
+- SSH
+- WRK2
+- go
+  
 
 ### Install Ecofloc  
 
 Go here and install on every machine:
 https://github.com/Luis-Huachaca-HV/ecofloc-microservices/tree/energy-experiments
+
+### Install Each Benchmark
+
+You Have TeaStore, DB Benchmarnk and MuBench, install them, and deploy them in the nodes you prefer, in this 
+case we had 3 nodes and the examples are for 3 nodes, but any amount of nodes can be put.
+
+
+Go here and install on every machine:
+https://github.com/Luis-Huachaca-HV/ecofloc-microservices/tree/energy-experiments
+
+### Gather Results.
+
+In this case we have graphics in TeaStore and DBench, first of all after you ran the overloaders and measured the energy in each component of the computer, the .sh (deploycomp.sh and energy_experiment.sh), logs of energy consumption will be generated, you can use the scripts in python to plot the variables.
+
+
+![Crossed Variables using 2 schedullers](DeathStarBench/hotelReservation/kubernetes/figures/imgs/comparacion_average_power.png)
+
+
 
 
 ---
