@@ -1,111 +1,94 @@
-# Scheduler-Plugins con EnergyScore
+Scheduler-Plugins with EnergyScore ⚡️
 
-Este directorio contiene el **plugin EnergyScore** y los parches necesarios para integrarlo en el proyecto oficial de Kubernetes Scheduler-Plugins.
+This directory ships the EnergyScore plugin and the patches required to integrate it into the official Kubernetes Scheduler-Plugins project.
 
-## Uso
+Usage 🛠️
 
-1. Clonar el repo oficial:
-   ```bash
-   git clone https://github.com/kubernetes-sigs/scheduler-plugins.git
-   cd scheduler-plugins
-2. Copiar el plugin de energy score en el nuevo pkg:
-   ```bash
-   cp -r ../Research-Project-Energy-Consumption/scheduler-plugins/pkg/energyscore pkg/
-4. Aplicar los parches:
-   ```bash
-   git apply ../Research-Project-Energy-Consumption/scheduler-plugins/patches/*.patch
-6. Copiar las configuraciones:
-   ```bash
-   cp ../Research-Project-Energy-Consumption/scheduler-plugins/configs/*.yaml ./config/
+Clone the official repo:
+
+git clone https://github.com/kubernetes-sigs/scheduler-plugins.git
+cd scheduler-plugins
 
 
-### 1. Instala Go (si no lo tienes actualizado)
+Copy the EnergyScore plugin into the new pkg:
 
-```bash
+cp -r ../Research-Project-Energy-Consumption/scheduler-plugins/pkg/energyscore pkg/
+
+
+Apply the patches:
+
+git apply ../Research-Project-Energy-Consumption/scheduler-plugins/patches/*.patch
+
+
+Copy configs:
+
+cp ../Research-Project-Energy-Consumption/scheduler-plugins/configs/*.yaml ./config/
+
+1. Install Go (latest version recommended)
 sudo apt update
 sudo apt install golang-go -y
-```
 
-(O mejor descarga desde [https://go.dev/dl/](https://go.dev/dl/) para tener la última versión).
 
----
+Or grab the latest tarball from https://go.dev/dl/
+.
 
-### 2. Limpia dependencias y descarga módulos
+2. Clean deps & fetch modules
 
-Desde la raíz de `scheduler-plugins`:
+From the root of scheduler-plugins:
 
-```bash
 go mod tidy
-```
 
----
-
-### 3. Compila el scheduler
-
-```bash
+3. Build the scheduler
 make build
-```
 
-Esto generará el binario del scheduler en:
 
-```
+This will generate the scheduler binary at:
+
 _bin/kube-scheduler
-```
 
----
+4. Run your patched scheduler
 
-### 4. Ejecuta tu scheduler modificado
+Test it in your cluster (kind, minikube, whatever):
 
-Puedes probarlo en tu cluster (por ejemplo, kind o minikube).
-Ejemplo de ejecución:
-
-```bash
 _bin/kube-scheduler --config energy-score-config.yaml --v=4
-```
 
----
+⚡ Notes
 
-Notas importantes:
+Changes in apis/config/v1/... and pkg/energyscore/ add new types + plugin logic → make sure your energy-score-config.yaml points to pkg/energyscore/.
 
-* Tus cambios en `apis/config/v1/...` y en `pkg/energyscore/` agregan **nuevos tipos y lógica de plugin** → asegúrate de que el `energy-score-config.yaml` que creaste apunte a tu plugin dentro de `pkg/energyscore/`.
-* Si falla el `make build` por falta de herramientas de código generado (como deepcopy, conversion, defaults), se suele regenerar con:
+If make build fails due to missing generated code (deepcopy, conversion, defaults), regenerate with:
 
-  ```bash
-  make update
-  ```
-
-  (esto corre `hack/update-codegen.sh` para que los `zz_generated.*.go` queden bien).
-
----
+make update
 
 
-2. Compila tu scheduler modificado
-```
+This runs hack/update-codegen.sh and refreshes the zz_generated.*.go files.
+
+Quick & Dirty Re-run 🚀
+
+Build your patched scheduler again:
+
 cd scheduler-plugins
 make build
-```
 
-Esto generará el binario en _bin/kube-scheduler.
 
-3. Lanza el scheduler con tu config
+→ Binary lands in _bin/kube-scheduler.
 
-Ejecuta (en una terminal separada):
-```
-_bin/kube-scheduler --config /ruta/a/energy-score-config.yaml --v=4
-```
+Launch it with your config (separate terminal):
 
-Notas:
+_bin/kube-scheduler --config /path/to/energy-score-config.yaml --v=4
 
---config debe apuntar a tu YAML.
 
---v=4 te da logs de depuración (útil para ver si carga EnergyScore).
+--config → must point to your YAML.
 
-Este scheduler correrá en tu host conectado al cluster, y usará el nombre energy-scheduler.
+--v=4 → debug-level logs (handy to confirm EnergyScore is actually loaded).
 
-4. Usa tu scheduler en Pods
+This scheduler will run on your host, connected to the cluster, under the name energy-scheduler.
 
-Crea un pod de prueba (test-pod.yaml) con:
+Use EnergyScore in Pods 🧪
 
-Aplica:
+Create a test pod (e.g. energy_test.yaml) with:
 
 kubectl apply -f energy_test.yaml
+
+
+And watch your pod get scheduled using the EnergyScore logic.
