@@ -59,8 +59,8 @@ https://github.com/Luis-Huachaca-HV/ecofloc-microservices/tree/energy-experiment
 
 In this case we have graphics in TeaStore and DBench, first of all after you ran the overloaders and measured the energy in each component of the computer, the .sh (deploycomp.sh and energy_experiment.sh), logs of energy consumption will be generated, you can use the scripts in python to plot the variables.
 
-
-![Crossed Variables using 2 schedullers](benchmarks/DeathStarBench/hotelReservation/kubernetes/figures/imgs/pruebacomp.png)
+todo to put cpu graphics
+![Crossed Variables using 2 schedullers](benchmarks/DeathStarBench/hotelReservation/kubernetes/figures/imgs/)
 
 
 The objective of the research is to identify key variables on energy consumption using diferent periferals of 
