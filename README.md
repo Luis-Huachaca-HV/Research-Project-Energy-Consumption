@@ -59,8 +59,16 @@ https://github.com/Luis-Huachaca-HV/ecofloc-microservices/tree/energy-experiment
 
 In this case we have graphics in TeaStore and DBench, first of all after you ran the overloaders and measured the energy in each component of the computer, the .sh (deploycomp.sh and energy_experiment.sh), logs of energy consumption will be generated, you can use the scripts in python to plot the variables.
 
-todo to put cpu graphics
-![Crossed Variables using 2 schedullers](benchmarks/DeathStarBench/hotelReservation/kubernetes/figures/imgs/)
+In the results we can view the energy consumption comparisson between different experiments according to their nodes.
+In the first figure we have the energy consumption of the CPU periferal, so 1 CPU request, limit 100m, in 1 worker node and control plante , then on 2 worker nodes, etc. each experiment had 1500 request and we measured 15 seconds in each. , 
+![Crossed Variables using 2 schedullers](benchmarks/DeathStarBench/hotelReservation/kubernetes/figures/imgs/cpu150015secnenergy_consumption1.png)
+
+In the second figure we have the energy consumption of the CPU periferal, but 4000 requests and measurement of 1 minute. but less experiments.
+![Crossed Variables using 2 schedullers](benchmarks/DeathStarBench/hotelReservation/kubernetes/figures/imgs/cpu40001minenergy_consumption1.png)
+
+After that you can see how energy consumption differs in each experiment and node, giving us key values on energy optimization.
+
+
 
 
 The objective of the research is to identify key variables on energy consumption using diferent periferals of 
