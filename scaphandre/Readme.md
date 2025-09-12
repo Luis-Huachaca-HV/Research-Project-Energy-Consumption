@@ -40,6 +40,8 @@ scaphandre::sensors: Not enough records for socket
 
 ## 3. Using a Custom Script
 
+Then at the same time you have to execute the script.
+
 We created our own script (`scaphscript.sh`) to measure consumption for specific process names.
 
 ### Step 1 — Give execution permissions

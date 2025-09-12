@@ -15,7 +15,7 @@ while true; do
         echo "Script finished after $elapsed_time seconds."
         break
     fi
-    #change java-mongo for your experiment related processes
+    #change kubernetes - docker to put your names for your experiment related processes
     postgres_power=$(curl -s http://localhost:8080/metrics | awk '
     /scaph_process_power_consumption_microwatts/ {
         # Extraer cmdline y exe directamente
