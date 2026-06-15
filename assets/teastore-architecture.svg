@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="540" viewBox="0 0 1100 540" role="img" aria-labelledby="title desc">
+<title id="title">TeaStore architecture</title>
+<desc id="desc">Simplified TeaStore microservice topology used in the LLAPA artifact.</desc>
+<defs>
+  <style>
+    .bg { fill: #fffaf2; }
+    .title { font: 700 28px Arial, sans-serif; fill: #1f2937; }
+    .label { font: 700 18px Arial, sans-serif; fill: #17212f; }
+    .small { font: 500 14px Arial, sans-serif; fill: #475569; }
+    .svc { rx: 20; ry: 20; stroke-width: 3; }
+    .arrow { stroke: #334155; stroke-width: 3; fill: none; marker-end: url(#m); }
+  </style>
+  <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0,0 L12,6 L0,12 z" fill="#334155"/>
+  </marker>
+</defs>
+<rect class="bg" width="1100" height="540"/>
+<text x="56" y="56" class="title">TeaStore benchmark topology</text>
+<text x="56" y="86" class="small">The artifact profiles each service independently and then feeds those profiles into scheduler experiments.</text>
+
+<rect x="70" y="220" width="170" height="92" class="svc" fill="#dceafe" stroke="#2563eb"/>
+<text x="116" y="274" class="label">WebUI</text>
+
+<rect x="310" y="80" width="170" height="92" class="svc" fill="#e6f4ea" stroke="#2f855a"/>
+<text x="366" y="134" class="label">Auth</text>
+
+<rect x="310" y="220" width="170" height="92" class="svc" fill="#fde7d8" stroke="#dd6b20"/>
+<text x="336" y="274" class="label">Persistence</text>
+
+<rect x="310" y="360" width="170" height="92" class="svc" fill="#efe4fb" stroke="#7c3aed"/>
+<text x="344" y="414" class="label">Image Provider</text>
+
+<rect x="570" y="130" width="170" height="92" class="svc" fill="#fff1cf" stroke="#c28800"/>
+<text x="602" y="184" class="label">Recommender</text>
+
+<rect x="570" y="310" width="170" height="92" class="svc" fill="#ffd9df" stroke="#d53f8c"/>
+<text x="632" y="364" class="label">DB</text>
+
+<rect x="830" y="220" width="170" height="92" class="svc" fill="#d7f5f4" stroke="#0f766e"/>
+<text x="874" y="274" class="label">Registry</text>
+
+<path d="M240 266 H310" class="arrow"/>
+<path d="M240 266 C270 266 278 126 310 126" class="arrow"/>
+<path d="M240 266 C270 266 278 406 310 406" class="arrow"/>
+<path d="M480 266 H570" class="arrow"/>
+<path d="M480 266 C525 266 520 356 570 356" class="arrow"/>
+<path d="M480 126 H570" class="arrow"/>
+<path d="M740 176 C790 176 780 266 830 266" class="arrow"/>
+<path d="M740 356 C790 356 780 266 830 266" class="arrow"/>
+
+<text x="92" y="338" class="small">Entry point for user requests</text>
+<text x="330" y="480" class="small">LLAPA highlights CPU-heavy and storage-heavy roles instead of treating TeaStore as a single node-level workload.</text>
+</svg>

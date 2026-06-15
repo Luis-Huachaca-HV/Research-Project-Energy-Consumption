@@ -1,131 +1,82 @@
+# EnergyScore Scheduler Artifact
 
----
+This directory contains the scheduler-side artifact for LLAPA: a Kubernetes `ScorePlugin` called `EnergyScore`, the patch set required to register it in `scheduler-plugins`, and the configuration used to run it as `energy-scheduler`.
 
-# Scheduler-Plugins with EnergyScore ⚡️
+![Scheduler evolution](../assets/scheduler-evolution.svg)
 
-This directory ships the **EnergyScore plugin** and the patches required to integrate it into the official Kubernetes Scheduler-Plugins project.
+## What is implemented here
 
----
+The code currently stored in [pkg/energyscore/energyscore.go](/home/luish/Documents/repoluispro/Research-Project-Energy-Consumption/scheduler-plugins/pkg/energyscore/energyscore.go) is the first working scheduler version:
 
-## Usage 🛠️
+- it reads one node label, `energy-score`;
+- it multiplies that value by `weightMultiplier`;
+- it returns the result during the scheduler scoring phase.
 
-1. Clone the official repo:
+This is the minimal scheduler artifact that proves the full integration path:
 
-   ```bash
-   git clone https://github.com/kubernetes-sigs/scheduler-plugins.git
-   cd scheduler-plugins
-   ```
+- plugin registration through the `cmd/scheduler/main.go` patch;
+- scheduler configuration through `configs/energy-score-config.yaml`;
+- pod-level usage through `schedulerName: energy-scheduler`.
 
-2. Copy the EnergyScore plugin into the new `pkg`:
+## Why version 1 still matters
 
-   ```bash
-   cp -r ../Research-Project-Energy-Consumption/scheduler-plugins/pkg/energyscore pkg/
-   ```
+`v1` is intentionally simple. It does not yet consume the full LLAPA profile, but it verifies the hard part first: running a custom Kubernetes scheduler that can bias placement with an external energy signal.
 
-3. Apply the patches:
+In other words, `v1` established the scheduling hook before the multi-device model was ready.
 
-   ```bash
-   git apply ../Research-Project-Energy-Consumption/scheduler-plugins/patches/*.patch
-   ```
+## Version 2 direction
 
-4. Copy configs:
+The follow-up scheduler notes from the active development workspace define `v2` as the LLAPA-aligned refinement:
 
-   ```bash
-   cp ../Research-Project-Energy-Consumption/scheduler-plugins/configs/*.yaml ./config/
-   ```
+- replace the single label with per-device labels;
+- combine device-level energy with current node load;
+- normalize and damp the score so energy influences scheduling without overwhelming standard Kubernetes placement logic.
 
----
+The four labels proposed for `v2` are:
 
-### 1. Install Go (latest version recommended)
+- `energy.cpu.j`
+- `energy.ram.j`
+- `energy.nic.j`
+- `energy.sd.j`
 
-```bash
-sudo apt update
-sudo apt install golang-go -y
-```
+The conceptual improvement is straightforward: `v1` says “this node is globally efficient,” while `v2` says “this node is efficient for the devices this microservice actually stresses.”
 
-Or grab the latest tarball from [https://go.dev/dl/](https://go.dev/dl/).
+## How it connects to the paper
 
----
+Section 5 of the paper introduced an initial energy-aware scheduler driven by LLAPA profiles. This directory is the implementation artifact for that line of work:
 
-### 2. Clean deps & fetch modules
+- `v1` maps to the first pluginized scheduler integration.
+- `v2` maps to the next multi-component scoring model that better matches the paper’s device-aware motivation.
 
-From the root of `scheduler-plugins`:
+## Files
 
-```bash
-go mod tidy
-```
+- [pkg/energyscore/energyscore.go](/home/luish/Documents/repoluispro/Research-Project-Energy-Consumption/scheduler-plugins/pkg/energyscore/energyscore.go): current `v1` plugin implementation.
+- [configs/energy-score-config.yaml](/home/luish/Documents/repoluispro/Research-Project-Energy-Consumption/scheduler-plugins/configs/energy-score-config.yaml): scheduler config for `energy-scheduler`.
+- [configs/podep.yaml](/home/luish/Documents/repoluispro/Research-Project-Energy-Consumption/scheduler-plugins/configs/podep.yaml): sample pod/deployment manifest.
+- [configs/test-pod.yaml](/home/luish/Documents/repoluispro/Research-Project-Energy-Consumption/scheduler-plugins/configs/test-pod.yaml): simple test pod.
+- `patches/*.patch`: changes required to register the plugin inside the upstream `scheduler-plugins` project.
 
----
+## Build and run
 
-### 3. Build the scheduler
+1. Clone upstream `scheduler-plugins`.
+2. Copy `pkg/energyscore`.
+3. Apply the patches from this repo.
+4. Copy the YAML config files.
+5. Run `make build`.
+6. Start the binary with `--config energy-score-config.yaml`.
 
-```bash
-make build
-```
-
-This will generate the scheduler binary at:
-
-```
-_bin/kube-scheduler
-```
-
----
-
-### 4. Run your patched scheduler
-
-Test it in your cluster (kind, minikube, whatever):
+Example:
 
 ```bash
-_bin/kube-scheduler --config energy-score-config.yaml --v=4
-```
-
----
-
-## ⚡ Notes
-
-* Changes in `apis/config/v1/...` and `pkg/energyscore/` add **new types + plugin logic** → make sure your `energy-score-config.yaml` points to `pkg/energyscore/`.
-* If `make build` fails due to missing generated code (deepcopy, conversion, defaults), regenerate with:
-
-  ```bash
-  make update
-  ```
-
-  This runs `hack/update-codegen.sh` and refreshes the `zz_generated.*.go` files.
-
----
-
-## Quick & Dirty Re-run 🚀
-
-2. Build your patched scheduler again:
-
-```bash
+git clone https://github.com/kubernetes-sigs/scheduler-plugins.git
 cd scheduler-plugins
+cp -r ../Research-Project-Energy-Consumption/scheduler-plugins/pkg/energyscore pkg/
+git apply ../Research-Project-Energy-Consumption/scheduler-plugins/patches/*.patch
+cp ../Research-Project-Energy-Consumption/scheduler-plugins/configs/*.yaml ./config/
 make build
+_bin/kube-scheduler --config ./config/energy-score-config.yaml --v=4
 ```
 
-→ Binary lands in `_bin/kube-scheduler`.
+## Present limitation
 
-3. Launch it with your config (separate terminal):
-
-```bash
-_bin/kube-scheduler --config /path/to/energy-score-config.yaml --v=4
-```
-
-* `--config` → must point to your YAML.
-* `--v=4` → debug-level logs (handy to confirm EnergyScore is actually loaded).
-* This scheduler will run on your host, connected to the cluster, under the name `energy-scheduler`.
-
----
-
-## Use EnergyScore in Pods 🧪
-
-Create a test pod (e.g. `energy_test.yaml`) with:
-
-```bash
-kubectl apply -f energy_test.yaml
-```
-
-And watch your pod get scheduled using the EnergyScore logic.
-
----
-
+The repository code is still `v1`. If you want the scheduler to consume the same four-device view that LLAPA produces for TeaStore and µBench, the next implementation step is to encode those device-level values as per-node labels or another scheduler-visible input and extend `EnergyScore` accordingly.

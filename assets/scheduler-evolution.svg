@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="520" viewBox="0 0 1180 520" role="img" aria-labelledby="title desc">
+<title id="title">Scheduler evolution</title>
+<desc id="desc">Comparison between EnergyScore scheduler version 1 and the planned version 2.</desc>
+<defs>
+  <style>
+    .bg { fill: #faf8f2; }
+    .title { font: 700 28px Arial, sans-serif; fill: #111827; }
+    .label { font: 700 20px Arial, sans-serif; fill: #17212f; }
+    .small { font: 500 14px Arial, sans-serif; fill: #4b5563; }
+    .box { rx: 24; ry: 24; stroke-width: 3; }
+    .arrow { stroke: #475569; stroke-width: 4; fill: none; marker-end: url(#m); }
+  </style>
+  <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0,0 L12,6 L0,12 z" fill="#475569"/>
+  </marker>
+</defs>
+<rect class="bg" width="1180" height="520"/>
+<text x="56" y="56" class="title">Energy-aware scheduler evolution</text>
+<text x="56" y="86" class="small">The artifact documents the move from a single-node label to a multi-device, workload-aware scoring model.</text>
+
+<rect x="70" y="150" width="400" height="260" class="box" fill="#dbeafe" stroke="#2563eb"/>
+<text x="104" y="196" class="label">Version 1</text>
+<text x="104" y="232" class="small">Implemented in this repo.</text>
+<text x="104" y="264" class="small">• one node label: `energy-score`</text>
+<text x="104" y="290" class="small">• optional weight multiplier</text>
+<text x="104" y="316" class="small">• simple preference during Score phase</text>
+<text x="104" y="342" class="small">• good first validation of scheduler wiring</text>
+
+<rect x="710" y="150" width="400" height="260" class="box" fill="#fde7d8" stroke="#dd6b20"/>
+<text x="744" y="196" class="label">Version 2</text>
+<text x="744" y="232" class="small">Documented next step for LLAPA-aware scheduling.</text>
+<text x="744" y="264" class="small">• four labels: CPU, RAM, NIC, storage</text>
+<text x="744" y="290" class="small">• combine energy with load-awareness</text>
+<text x="744" y="316" class="small">• normalize and damp outliers</text>
+<text x="744" y="342" class="small">• align scoring with measured service profiles</text>
+
+<path d="M470 280 H710" class="arrow"/>
+<text x="532" y="258" class="small">refined with LLAPA profiles</text>
+</svg>
