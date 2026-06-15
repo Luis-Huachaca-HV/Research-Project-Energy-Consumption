@@ -19,25 +19,25 @@
 <text x="56" y="86" class="small">The artifact profiles each service independently and then feeds those profiles into scheduler experiments.</text>
 
 <rect x="70" y="220" width="170" height="92" class="svc" fill="#dceafe" stroke="#2563eb"/>
-<text x="116" y="274" class="label">WebUI</text>
+<text x="155" y="274" text-anchor="middle" class="label">WebUI</text>
 
 <rect x="310" y="80" width="170" height="92" class="svc" fill="#e6f4ea" stroke="#2f855a"/>
-<text x="366" y="134" class="label">Auth</text>
+<text x="395" y="134" text-anchor="middle" class="label">Auth</text>
 
 <rect x="310" y="220" width="170" height="92" class="svc" fill="#fde7d8" stroke="#dd6b20"/>
-<text x="336" y="274" class="label">Persistence</text>
+<text x="395" y="274" text-anchor="middle" class="label">Persistence</text>
 
 <rect x="310" y="360" width="170" height="92" class="svc" fill="#efe4fb" stroke="#7c3aed"/>
-<text x="344" y="414" class="label">Image Provider</text>
+<text x="395" y="414" text-anchor="middle" class="label">Image Provider</text>
 
 <rect x="570" y="130" width="170" height="92" class="svc" fill="#fff1cf" stroke="#c28800"/>
-<text x="602" y="184" class="label">Recommender</text>
+<text x="655" y="184" text-anchor="middle" class="label">Recommender</text>
 
 <rect x="570" y="310" width="170" height="92" class="svc" fill="#ffd9df" stroke="#d53f8c"/>
-<text x="632" y="364" class="label">DB</text>
+<text x="655" y="364" text-anchor="middle" class="label">DB</text>
 
 <rect x="830" y="220" width="170" height="92" class="svc" fill="#d7f5f4" stroke="#0f766e"/>
-<text x="874" y="274" class="label">Registry</text>
+<text x="915" y="274" text-anchor="middle" class="label">Registry</text>
 
 <path d="M240 266 H310" class="arrow"/>
 <path d="M240 266 C270 266 278 126 310 126" class="arrow"/>

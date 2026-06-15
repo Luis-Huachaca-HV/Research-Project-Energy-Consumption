@@ -48,6 +48,10 @@ Section 5 of the paper introduced an initial energy-aware scheduler driven by LL
 - `v1` maps to the first pluginized scheduler integration.
 - `v2` maps to the next multi-component scoring model that better matches the paper’s device-aware motivation.
 
+## Evaluation & Results
+
+For a complete performance and energy consumption analysis comparing `v2` vs `v1` and the baseline (including throughput, request execution success, and per-microservice profile graphs), please see the **[V2 vs V1 Evaluation & Comparison Report](COMPARISON.md)**.
+
 ## Files
 
 - [pkg/energyscore/energyscore.go](/home/luish/Documents/repoluispro/Research-Project-Energy-Consumption/scheduler-plugins/pkg/energyscore/energyscore.go): current `v1` plugin implementation.

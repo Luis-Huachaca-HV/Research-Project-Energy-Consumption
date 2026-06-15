@@ -43,6 +43,6 @@
 <path d="M360 255 H440" class="arrow"/>
 <path d="M740 255 H820" class="arrow"/>
 
-<rect x="340" y="410" width="500" height="64" rx="18" ry="18" fill="#111827"/>
-<text x="368" y="450" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f9fafb">Result: LLAPA can profile both real apps and generated service-cell workloads</text>
+<rect x="170" y="410" width="840" height="64" rx="18" ry="18" fill="#111827"/>
+<text x="590" y="449" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f9fafb">Result: LLAPA can profile both real apps and generated service-cell workloads</text>
 </svg>
