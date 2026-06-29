@@ -18,42 +18,42 @@
 <text x="60" y="58" class="title">LLAPA methodological workflow</text>
 <text x="60" y="88" class="small">Energy attribution across deployment, runtime operations, and scheduler-side infrastructure activity.</text>
 
-<rect x="50" y="140" width="250" height="240" class="box" fill="#d8efe3" stroke="#2e8b57"/>
-<text x="76" y="182" class="text">1. PID tracking</text>
-<text x="76" y="218" class="small">Capture container and orchestrator PIDs</text>
-<text x="76" y="244" class="small">during deployment and runtime.</text>
-<text x="76" y="286" class="small">Inputs:</text>
-<text x="76" y="312" class="small">• microservices</text>
-<text x="76" y="336" class="small">• kube-system services</text>
+<rect x="45" y="140" width="260" height="240" class="box" fill="#d8efe3" stroke="#2e8b57"/>
+<text x="62" y="182" class="text">1. PID tracking</text>
+<text x="62" y="218" class="small">Capture container and orchestrator</text>
+<text x="62" y="244" class="small">PIDs during deploy &amp; runtime.</text>
+<text x="62" y="286" class="small">Inputs:</text>
+<text x="62" y="312" class="small">• microservices</text>
+<text x="62" y="336" class="small">• kube-system services</text>
 
-<rect x="335" y="140" width="250" height="240" class="box" fill="#fde8d6" stroke="#d97706"/>
-<text x="361" y="182" class="text">2. Operation grouping</text>
-<text x="361" y="218" class="small">Separate deployment, functional,</text>
-<text x="361" y="244" class="small">and scheduling-related activity.</text>
-<text x="361" y="286" class="small">Examples:</text>
-<text x="361" y="312" class="small">• image pull / bootstrapping</text>
-<text x="361" y="336" class="small">• db access / auth / UI work</text>
+<rect x="330" y="140" width="260" height="240" class="box" fill="#fde8d6" stroke="#d97706"/>
+<text x="347" y="182" class="text">2. Operation grouping</text>
+<text x="347" y="218" class="small">Separate deployment, functional,</text>
+<text x="347" y="244" class="small">and scheduling-related activity.</text>
+<text x="347" y="286" class="small">Examples:</text>
+<text x="347" y="312" class="small">• image pull / bootstrapping</text>
+<text x="347" y="336" class="small">• db access / auth / UI work</text>
 
-<rect x="620" y="140" width="250" height="240" class="box" fill="#dce9fb" stroke="#2563eb"/>
-<text x="646" y="182" class="text">3. Energy attribution</text>
-<text x="646" y="218" class="small">Use EcoFloc samples to assign Joules</text>
-<text x="646" y="244" class="small">to CPU, RAM, NIC, and storage.</text>
-<text x="646" y="286" class="small">Sampling windows:</text>
-<text x="646" y="312" class="small">• deploy until running</text>
-<text x="646" y="336" class="small">• fixed Δt at runtime</text>
+<rect x="615" y="140" width="260" height="240" class="box" fill="#dce9fb" stroke="#2563eb"/>
+<text x="632" y="182" class="text">3. Energy attribution</text>
+<text x="632" y="218" class="small">Use EcoFloc to assign Joules</text>
+<text x="632" y="244" class="small">to CPU, RAM, NIC, and storage.</text>
+<text x="632" y="286" class="small">Sampling windows:</text>
+<text x="632" y="312" class="small">• deploy until running</text>
+<text x="632" y="336" class="small">• fixed Δt at runtime</text>
 
-<rect x="905" y="140" width="250" height="240" class="box" fill="#efe0f8" stroke="#7c3aed"/>
-<text x="931" y="182" class="text">4. Profiling analysis</text>
-<text x="931" y="218" class="small">Build per-service profiles and derive</text>
-<text x="931" y="244" class="small">scheduler inputs from the results.</text>
-<text x="931" y="286" class="small">Outputs:</text>
-<text x="931" y="312" class="small">• totals and averages</text>
-<text x="931" y="336" class="small">• per-device energy patterns</text>
+<rect x="900" y="140" width="260" height="240" class="box" fill="#efe0f8" stroke="#7c3aed"/>
+<text x="917" y="182" class="text">4. Profiling analysis</text>
+<text x="917" y="218" class="small">Build per-service profiles and</text>
+<text x="917" y="244" class="small">derive scheduler inputs from them.</text>
+<text x="917" y="286" class="small">Outputs:</text>
+<text x="917" y="312" class="small">• totals and averages</text>
+<text x="917" y="336" class="small">• per-device energy patterns</text>
 
-<path d="M300 260 H335" class="arrow"/>
-<path d="M585 260 H620" class="arrow"/>
-<path d="M870 260 H905" class="arrow"/>
+<path d="M305 260 H330" class="arrow"/>
+<path d="M590 260 H615" class="arrow"/>
+<path d="M875 260 H900" class="arrow"/>
 
-<rect x="380" y="424" width="440" height="72" rx="18" ry="18" fill="#1f2937"/>
-<text x="410" y="467" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">Artifact outcome: benchmark profiles + scheduler evidence</text>
+<rect x="300" y="424" width="600" height="72" rx="18" ry="18" fill="#1f2937"/>
+<text x="600" y="467" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">Artifact outcome: benchmark profiles + scheduler evidence</text>
 </svg>

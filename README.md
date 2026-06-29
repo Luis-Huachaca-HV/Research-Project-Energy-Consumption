@@ -76,6 +76,8 @@ This version is useful because it proves end-to-end scheduler integration: plugi
 
 The intended improvement is straightforward: align scheduler inputs with LLAPA outputs. Instead of treating a node as “energetically good” in the abstract, `v2` can prefer nodes whose device-level energy characteristics match the incoming microservice’s profile.
 
+For detailed performance, throughput, and energy consumption improvements of Version 2 compared to Version 1, see the **[V2 vs V1 Evaluation & Comparison Report](scheduler-plugins/COMPARISON.md)**.
+
 See [scheduler-plugins/README.md](/home/luish/Documents/repoluispro/Research-Project-Energy-Consumption/scheduler-plugins/README.md).
 
 ## Reproducibility notes
@@ -93,3 +95,4 @@ The benchmark READMEs point back to the canonical scripts used there, especially
 - Paper-aligned TeaStore artifact: [benchmarks/teastore/README.md](/home/luish/Documents/repoluispro/Research-Project-Energy-Consumption/benchmarks/teastore/README.md)
 - Updated µBench artifact: [benchmarks/mubench/README.md](/home/luish/Documents/repoluispro/Research-Project-Energy-Consumption/benchmarks/mubench/README.md)
 - Scheduler plugin artifact: [scheduler-plugins/README.md](/home/luish/Documents/repoluispro/Research-Project-Energy-Consumption/scheduler-plugins/README.md)
+- **[Scheduler V2 vs V1 Evaluation Report](scheduler-plugins/COMPARISON.md)**

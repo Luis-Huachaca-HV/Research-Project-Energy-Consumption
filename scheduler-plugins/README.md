@@ -81,6 +81,10 @@ Missing or `0` labels are treated as neutral (`50.0`).
 
 Unknown services fall back to the default priority: **CPU → RAM → SD → NIC**.
 
+## Evaluation & Results
+
+For a complete performance and energy consumption analysis comparing `v2` vs `v1` and the baseline (including throughput, request execution success, and per-microservice profile graphs), please see the **[V2 vs V1 Evaluation & Comparison Report](COMPARISON.md)**.
+
 ## Files
 
 - [`pkg/energyscore/energyscore.go`](pkg/energyscore/energyscore.go): `v2` plugin implementation.
